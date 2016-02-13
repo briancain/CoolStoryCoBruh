@@ -5,16 +5,25 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour {
 
   private GameObject[] enemies;
+  private GameObject player;
 
   // Use this for initialization
   void Start () {
     enemies = GameObject.FindGameObjectsWithTag(Tags.ENEMY);
+    player = GameObject.FindGameObjectWithTag(Tags.PLAYER);
   }
   // Update is called once per frame
   void Update () {
   }
 
   void InitSnakeMiniGame() {
+    bool isSuccess = player.GetComponent<PlayerController>().startMiniGameMode();
+
+    if (isSuccess) {
+      Debug.Log("Game manager started mini game");
+    } else {
+      Debug.Log("Game manager could not start mini game");
+    }
 
   }
 
