@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 2/13/2016 10:03:09 AM-->
+<!--Last exported: 2/13/2016 10:28:58 AM-->
 <Tiled2Unity version="1.0.4.2">
   <AssignMaterial mesh="mesh_0001" material="tiles_wall" />
   <AssignMaterial mesh="mesh_0002" material="tiles_floor" />
-  <Prefab name="level1" numTilesWide="40" numTilesHigh="30" tileWidth="256" tileHeight="256" exportScale="1" mapWidthInPixels="10240" mapHeightInPixels="7680">
+  <Prefab name="level1" numTilesWide="40" numTilesHigh="30" tileWidth="256" tileHeight="256" exportScale="1" mapWidthInPixels="10240" mapHeightInPixels="7680" scale="0.00390625">
     <GameObject name="floor" x="0" y="0">
       <GameObject name="tiles_wall" copy="mesh_0001" sortingLayerName="" sortingOrder="0" opacity="1" />
       <GameObject name="tiles_floor" copy="mesh_0002" sortingLayerName="" sortingOrder="0" opacity="1" />
