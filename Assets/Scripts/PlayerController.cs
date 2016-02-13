@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
   }
 
   public bool startMiniGameMode(){
-    Debug.Log("Starting mini game");
+    Debug.Log("Starting mini game, halting player movement");
     if (!miniGameHappening) {
       miniGameHappening = true;
       return true;
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
   }
 
   public bool endMiniGameMode() {
-    Debug.Log("Mini game over");
+    Debug.Log("Mini game over, continuing player movement");
     if (miniGameHappening) {
       miniGameHappening = false;
       return true;
