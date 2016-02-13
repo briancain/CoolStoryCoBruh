@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour {
   void Update () {
   }
 
+  void InitSnakeMiniGame() {
+
+  }
+
   void GameOver() {
     Debug.Log("Game Over");
     //SceneManager.LoadScene(Scenes.GAME_OVER);

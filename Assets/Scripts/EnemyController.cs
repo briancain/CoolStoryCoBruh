@@ -3,10 +3,10 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour {
 
-	public float enemySpeed;
+  public float enemySpeed;
   public GameObject[] waypoints;
 
-	private Rigidbody2D rb;
+  private Rigidbody2D rb;
   private int currWaypoint = 1;
   private bool forwardPath = true;
   private bool moving = true;
@@ -20,18 +20,18 @@ public class EnemyController : MonoBehaviour {
 
   private GameObject player;
 
-	// Use this for initialization
-	void Start () {
-		rb = gameObject.GetComponent<Rigidbody2D> ();
+  // Use this for initialization
+  void Start () {
+    rb = gameObject.GetComponent<Rigidbody2D> ();
     player = GameObject.FindGameObjectWithTag (Tags.PLAYER);
     facing = (waypoints [currWaypoint].transform.position - gameObject.transform.position).normalized;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		Move ();
+  }
+
+  // Update is called once per frame
+  void Update () {
+    Move ();
     LineOfSight ();
-	}
+  }
 
   // Move the enemy based on their facing
   private void Move() {

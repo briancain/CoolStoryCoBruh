@@ -3,24 +3,24 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	public float playerSpeed;
+  public float playerSpeed;
 
-	private Rigidbody2D rb;
+  private Rigidbody2D rb;
 
-	void Start() {
-		rb = gameObject.GetComponent<Rigidbody2D> ();
-	}
+  void Start() {
+    rb = gameObject.GetComponent<Rigidbody2D> ();
+  }
 
-	// Update is called once per frame
-	void Update () {
-		Move ();
-	}
+  // Update is called once per frame
+  void Update () {
+    Move ();
+  }
 
-	// Moves the player based on input
-	private void Move() {
-		float xVel = playerSpeed * Input.GetAxisRaw ("Horizontal");
-		float yVel = playerSpeed * Input.GetAxisRaw ("Vertical");
+  // Moves the player based on input
+  private void Move() {
+    float xVel = playerSpeed * Input.GetAxisRaw ("Horizontal");
+    float yVel = playerSpeed * Input.GetAxisRaw ("Vertical");
 
-		rb.velocity = new Vector2 (xVel, yVel);
-	}
+    rb.velocity = new Vector2 (xVel, yVel);
+  }
 }
