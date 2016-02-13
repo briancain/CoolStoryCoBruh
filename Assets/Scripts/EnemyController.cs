@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour {
   private int currWaypoint = 1;
   private bool forwardPath = true;
   private bool moving = true;
+  public bool alert = false;
 
   private float stopTimer = 0f;
 
@@ -20,20 +21,46 @@ public class EnemyController : MonoBehaviour {
 
   private GameObject player;
 
-	// Use this for initialization
+  /////////////////////////////////
+  /// Unity Methods
+  /////////////////////////////////
+
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D> ();
     player = GameObject.FindGameObjectWithTag (Tags.PLAYER);
     facing = (waypoints [currWaypoint].transform.position - gameObject.transform.position).normalized;
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		Move ();
+    if (!alert) {
+      Move ();
+    } else {
+      facing = (player.transform.position - gameObject.transform.position).normalized;
+    }
     LineOfSight ();
 	}
 
-  // Move the enemy based on their facing
+
+  /////////////////////////////////
+  /// Public Methods
+  /////////////////////////////////
+
+  // Send this enemy into an alert state
+  public void Alert() {
+    alert = true;
+  }
+
+  // End this enemy's alert status
+  public void EndAlert() {
+    facing = (waypoints[currWaypoint].transform.position - gameObject.transform.position).normalized;
+    alert = false;
+  }
+
+  /////////////////////////////////
+  /// Private Methods
+  /////////////////////////////////
+
+  // Move the enemy along their patrol path
   private void Move() {
     GameObject dest = waypoints [currWaypoint];
     Waypoint wp = dest.GetComponent<Waypoint> ();
