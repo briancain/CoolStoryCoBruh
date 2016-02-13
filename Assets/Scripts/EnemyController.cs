@@ -14,15 +14,21 @@ public class EnemyController : MonoBehaviour {
   private bool moving = true;
   private float stopTime = 2f;
   private float stopTimer = 0f;
+  private float losDistance = 15f;
+  private float losAngle = 120f;
+
+  private GameObject player;
 
 	// Use this for initialization
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D> ();
+    player = GameObject.FindGameObjectWithTag (Tags.PLAYER);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		Move ();
+    LineOfSight ();
 	}
 
   // Move the enemy based on their facing
@@ -30,6 +36,7 @@ public class EnemyController : MonoBehaviour {
     if (moving) {
       // Move towards the next waypoint at the enemy speed
       rb.position = Vector2.MoveTowards (gameObject.transform.position, waypoints [currWaypoint].position, enemySpeed * Time.deltaTime);
+
     } else {
       // Make sure teh enemy stops for a certain time before moving to the next waypoint
       stopTimer += Time.deltaTime;
@@ -71,4 +78,18 @@ public class EnemyController : MonoBehaviour {
       return Vector2.zero;
 		}
 	}
+
+  // Look for the player
+  private void LineOfSight() {
+    bool closeEnough = Vector2.Distance (gameObject.transform.position, player.transform.position) <= losDistance;
+    Vector2 toPlayer = (player.transform.position - gameObject.transform.position).normalized;
+    float angleBetween = Vector2.Angle (GetDirectionVector (), toPlayer);
+    if (closeEnough && angleBetween <= losAngle / 2.0f) {
+      // The player is within the guard's LOS, so make a raycast to ensure nothing is in the way
+      RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, toPlayer, losDistance, ~Layers.CreateLayerMask(Layers.IGNORE_RAYCAST));
+      if (hit != null && hit.collider.gameObject.tag == Tags.PLAYER) {
+        print ("ENEMY SAW PLAYER");
+      }
+    }
+  }
 }
