@@ -4,16 +4,15 @@ using System.Collections;
 public class EnemyController : MonoBehaviour {
 
 	public float enemySpeed;
-  public enum Facing { LEFT, RIGHT, UP, DOWN };
-	public Facing currFacing;
-  public Transform[] waypoints;
+  public GameObject[] waypoints;
 
 	private Rigidbody2D rb;
   private int currWaypoint = 1;
   private bool forwardPath = true;
   private bool moving = true;
-  private float stopTime = 2f;
+
   private float stopTimer = 0f;
+
   private float losDistance = 15f;
   private float losAngle = 120f;
 
@@ -25,7 +24,7 @@ public class EnemyController : MonoBehaviour {
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D> ();
     player = GameObject.FindGameObjectWithTag (Tags.PLAYER);
-    facing = (waypoints [currWaypoint].position - gameObject.transform.position).normalized;
+    facing = (waypoints [currWaypoint].transform.position - gameObject.transform.position).normalized;
 	}
 	
 	// Update is called once per frame
@@ -36,66 +35,39 @@ public class EnemyController : MonoBehaviour {
 
   // Move the enemy based on their facing
   private void Move() {
+    GameObject dest = waypoints [currWaypoint];
+    Waypoint wp = dest.GetComponent<Waypoint> ();
+
     if (moving) {
       // Move towards the next waypoint at the enemy speed
-      rb.position = Vector2.MoveTowards (gameObject.transform.position, waypoints [currWaypoint].position, enemySpeed * Time.deltaTime);
+      rb.position = Vector2.MoveTowards (gameObject.transform.position, dest.transform.position, enemySpeed * Time.deltaTime);
 
     } else {
       // Make sure teh enemy stops for a certain time before moving to the next waypoint
       stopTimer += Time.deltaTime;
-      if (stopTimer >= stopTime) {
+      if (stopTimer >= wp.waitTime) {
         moving = true;
         stopTimer = 0f;
-        facing = (waypoints [currWaypoint].position - gameObject.transform.position).normalized;
+        if (currWaypoint == 0 || currWaypoint == waypoints.Length - 1) {
+          forwardPath = !forwardPath;
+        }
+        if (forwardPath) {
+          currWaypoint++;
+        } else {
+          currWaypoint--;
+        }
+        dest = waypoints [currWaypoint];
+        wp = dest.GetComponent<Waypoint> ();
+        facing = (dest.transform.position - gameObject.transform.position).normalized;
       }
     }
 
-    // If the enemy has moved onto one of its waypoints, stop movement and target the
-    // next waypoint
-    if (rb.transform.position == waypoints [currWaypoint].position && moving) {
+    // If the enemy has moved onto one of its waypoints, stop 
+    if (rb.transform.position == dest.transform.position && moving) {
+      print ("Should stop");
       moving = false;
-      if (currWaypoint == 0 || currWaypoint == waypoints.Length - 1) {
-        forwardPath = !forwardPath;
-      }
-      if (forwardPath) {
-        currWaypoint++;
-      } else {
-        currWaypoint--;
-      }
+      facing = wp.directionToLook;
     }
-  }
-
-	// Returns a normalized direction vector based on the Enemy's
-	// current facing
-	private Vector2 GetDirectionVector() {
-		switch (currFacing) {
-    case Facing.LEFT:
-      return Vector2.left;
-    case Facing.RIGHT:
-      return Vector2.right;
-    case Facing.UP:
-      return Vector2.up;
-    case Facing.DOWN:
-      return Vector2.down;
-    default:
-      // This case should be unreachable
-      return Vector2.zero;
-		}
-	}
-
-  private Facing DirectionToFacing(Vector2 directionVec) {
-    Vector2 direction = directionVec.normalized;
-    if (direction == Vector2.left) {
-      return Facing.LEFT;
-    } else if (direction == Vector2.right) {
-      return Facing.RIGHT;
-    } else if (direction == Vector2.up) {
-      return Facing.UP;
-    } else if (direction == Vector2.down) {
-      return Facing.DOWN;
-    }
-
-    return Facing.LEFT;
   }
 
   // Look for the player
