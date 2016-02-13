@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5041072}
   - 114: {fileID: 11446082}
   - 61: {fileID: 6147582}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemyGuard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,6 +75,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 3
   currFacing: 0
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &21205272
 SpriteRenderer:
   m_ObjectHideFlags: 1
