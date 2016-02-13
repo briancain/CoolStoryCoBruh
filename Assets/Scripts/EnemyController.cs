@@ -17,12 +17,15 @@ public class EnemyController : MonoBehaviour {
   private float losDistance = 15f;
   private float losAngle = 120f;
 
+  private Vector2 facing;
+
   private GameObject player;
 
 	// Use this for initialization
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D> ();
     player = GameObject.FindGameObjectWithTag (Tags.PLAYER);
+    facing = (waypoints [currWaypoint].position - gameObject.transform.position).normalized;
 	}
 	
 	// Update is called once per frame
@@ -43,6 +46,7 @@ public class EnemyController : MonoBehaviour {
       if (stopTimer >= stopTime) {
         moving = true;
         stopTimer = 0f;
+        facing = (waypoints [currWaypoint].position - gameObject.transform.position).normalized;
       }
     }
 
@@ -79,11 +83,26 @@ public class EnemyController : MonoBehaviour {
 		}
 	}
 
+  private Facing DirectionToFacing(Vector2 directionVec) {
+    Vector2 direction = directionVec.normalized;
+    if (direction == Vector2.left) {
+      return Facing.LEFT;
+    } else if (direction == Vector2.right) {
+      return Facing.RIGHT;
+    } else if (direction == Vector2.up) {
+      return Facing.UP;
+    } else if (direction == Vector2.down) {
+      return Facing.DOWN;
+    }
+
+    return Facing.LEFT;
+  }
+
   // Look for the player
   private void LineOfSight() {
     bool closeEnough = Vector2.Distance (gameObject.transform.position, player.transform.position) <= losDistance;
     Vector2 toPlayer = (player.transform.position - gameObject.transform.position).normalized;
-    float angleBetween = Vector2.Angle (GetDirectionVector (), toPlayer);
+    float angleBetween = Vector2.Angle (facing, toPlayer);
     if (closeEnough && angleBetween <= losAngle / 2.0f) {
       // The player is within the guard's LOS, so make a raycast to ensure nothing is in the way
       RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, toPlayer, losDistance, ~Layers.CreateLayerMask(Layers.IGNORE_RAYCAST));
