@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
   public float playerSpeed;
+  public Text debug;
 
   private Rigidbody2D rb;
   private GameManager gm;
@@ -74,5 +76,7 @@ public class PlayerController : MonoBehaviour {
     if (snakeState == snakeStateMax || snakeState == snakeStateMin) {
       gm.AlertEnemies ();
     }
+
+    debug.text = "Snake State: " + (snakeState < 0 ? Mathf.Ceil (snakeState) : Mathf.Floor (snakeState));
   }
 }
