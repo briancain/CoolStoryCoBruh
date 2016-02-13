@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
     Debug.Log("You win!!");
   }
 
-  void AlertEnemies() {
+  public void AlertEnemies() {
     foreach (GameObject obj in enemies) {
       if (obj != null) {
           //obj.Alert();

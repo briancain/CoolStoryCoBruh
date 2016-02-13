@@ -6,10 +6,19 @@ public class PlayerController : MonoBehaviour {
   public float playerSpeed;
 
   private Rigidbody2D rb;
+  private GameManager gm;
+
   private bool miniGameHappening;
+
+  private float snakeState = 0;
+  private float rateOfChange = 2f;
+  private int snakeChange = 1;
+  private float snakeStateMax = 100f;
+  private float snakeStateMin = -100f;
 
   void Start() {
     rb = gameObject.GetComponent<Rigidbody2D> ();
+    gm = GameObject.FindGameObjectWithTag (Tags.GAME_MANAGER).GetComponent<GameManager> ();
 
     miniGameHappening = false;
   }
@@ -39,6 +48,11 @@ public class PlayerController : MonoBehaviour {
     if (!miniGameHappening) {
       Move ();
     }
+    UpdateSnakeState ();
+  }
+
+  public void ScarfSwitched() {
+    snakeChange *= -1;
   }
 
   // Moves the player based on input
@@ -47,5 +61,18 @@ public class PlayerController : MonoBehaviour {
     float yVel = playerSpeed * Input.GetAxisRaw ("Vertical");
 
     rb.velocity = new Vector2 (xVel, yVel);
+  }
+
+  private void UpdateSnakeState() {
+    snakeState += rateOfChange * Time.deltaTime * snakeChange;
+    if (snakeState > 0) {
+      snakeState = Mathf.Min (snakeState, snakeStateMax);
+    } else {
+      snakeState = Mathf.Max (snakeState, snakeStateMin);
+    }
+
+    if (snakeState == snakeStateMax || snakeState == snakeStateMin) {
+      gm.AlertEnemies ();
+    }
   }
 }
