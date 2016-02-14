@@ -313,7 +313,7 @@ Transform:
   - {fileID: 1207445277}
   - {fileID: 169383259}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1001 &169383258
 Prefab:
   m_ObjectHideFlags: 0
@@ -1498,6 +1498,14 @@ Prefab:
       propertyPath: debug
       value: 
       objectReference: {fileID: 1738387674}
+    - target: {fileID: 2052720, guid: 3a4d7030416304655bae6c6e255ad3e1, type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0.09019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052720, guid: 3a4d7030416304655bae6c6e255ad3e1, type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0.12941177
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a4d7030416304655bae6c6e255ad3e1, type: 2}
   m_IsPrefabParent: 0
