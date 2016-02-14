@@ -7,7 +7,7 @@ public class StationaryEnemyController : MonoBehaviour {
 
   public enum Facing { RIGHT, BACK_RIGHT, BACK, BACK_LEFT, LEFT, FRONT_LEFT, FRONT, FRONT_RIGHT }
 
-  private float losDistance = 15f;
+  private float losDistance = 8f;
   private float losAngle = 120f;
 
   private GameManager gm;
