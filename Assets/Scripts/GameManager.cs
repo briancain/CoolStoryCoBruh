@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
   public GameObject mgc;
   private AudioSource audio;
   public AudioClip gameTheme;
+  public AudioClip alertTheme;
 
   public Text gameOverText;
 
@@ -93,6 +94,8 @@ public class GameManager : MonoBehaviour {
         obj.GetComponent<StationaryEnemyController>().Alert();
       }
     }
+    audio.Stop();
+    audio.PlayOneShot(alertTheme, 1.0F);
   }
 
   void EndAlertEnemies() {
@@ -101,5 +104,8 @@ public class GameManager : MonoBehaviour {
         obj.GetComponent<StationaryEnemyController>().EndAlert();
       }
     }
+
+    audio.Stop();
+    audio.PlayOneShot(gameTheme, 1.0F);
   }
 }
