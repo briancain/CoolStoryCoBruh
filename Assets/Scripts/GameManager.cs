@@ -6,25 +6,48 @@ public class GameManager : MonoBehaviour {
 
   private GameObject[] enemies;
   private GameObject player;
+  private bool miniGameOngoing;
+
+  private MiniGameController miniGameController;
+  public GameObject mgc;
 
   // Use this for initialization
   void Start () {
     enemies = GameObject.FindGameObjectsWithTag(Tags.ENEMY);
     player = GameObject.FindGameObjectWithTag(Tags.PLAYER);
+
+    miniGameController = mgc.GetComponent<MiniGameController>();
+    miniGameOngoing = false;
   }
   // Update is called once per frame
   void Update () {
+    if (Input.GetKey(KeyCode.Space) && !miniGameOngoing) {
+      miniGameOngoing = true;
+      InitSnakeMiniGame();
+    }
   }
 
   void InitSnakeMiniGame() {
     bool isSuccess = player.GetComponent<PlayerController>().startMiniGameMode();
+    bool winGame = false;
 
     if (isSuccess) {
-      Debug.Log("Game manager started mini game");
+      Debug.Log("Game manager stopped player movement");
     } else {
-      Debug.Log("Game manager could not start mini game");
+      Debug.Log("Game manager could not stop player movement");
     }
 
+    winGame = miniGameController.StartGame();
+    Debug.Log("Player Mini Game Result: " + winGame);
+
+    isSuccess = player.GetComponent<PlayerController>().endMiniGameMode();
+    if (isSuccess) {
+      Debug.Log("Game manager started player movement");
+    } else {
+      Debug.Log("Game manager could not start player movement");
+    }
+
+    miniGameOngoing = false;
   }
 
   void GameOver() {
