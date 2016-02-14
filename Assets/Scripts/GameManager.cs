@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -12,6 +13,8 @@ public class GameManager : MonoBehaviour {
   public GameObject mgc;
   private AudioSource audio;
   public AudioClip gameTheme;
+
+  public Text gameOverText;
 
   // Use this for initialization
   void Start () {
@@ -76,6 +79,7 @@ public class GameManager : MonoBehaviour {
 
   public void GameOver() {
     Debug.Log("Game Over");
+    gameOverText.enabled = true;
     //SceneManager.LoadScene(Scenes.GAME_OVER);
   }
 
