@@ -115,7 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mgc: {fileID: 1606897069}
   gameTheme: {fileID: 8300000, guid: 64317fd3a402f433a8408424e26c6658, type: 3}
-  alertTheme: {fileID: 0}
+  continueGameTheme: {fileID: 8300000, guid: ddd885d3946ff44b2883c72119386bb8, type: 3}
+  alertTheme: {fileID: 8300000, guid: d428c44b3c6d84cbdb1fcd53dd0928aa, type: 3}
   gameOverText: {fileID: 861781678}
 --- !u!4 &141105236
 Transform:
@@ -1376,7 +1377,7 @@ Transform:
   - {fileID: 328022365}
   - {fileID: 1576125950}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1001 &1207445276
 Prefab:
   m_ObjectHideFlags: 0
