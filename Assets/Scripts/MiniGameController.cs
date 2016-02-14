@@ -5,6 +5,7 @@ public class MiniGameController : MonoBehaviour {
 
   private Vector2 swipeDirection;
   private int taps;
+  private int swipes;
   private int totalTaps;
   private int totalActions;
 
@@ -18,19 +19,22 @@ public class MiniGameController : MonoBehaviour {
     coolDown = 3.0f;
     totalActions = total;
     taps = 0;
+    swipes = 0;
     gm = GameObject.FindGameObjectWithTag(Tags.GAME_MANAGER).GetComponent<GameManager>();
     swipeGame = false;
     tapGame = false;
 
-    //if (Random.Range(0, 1) == 0) {
-    //  // mini game is swipe
-    //  swipeGame = true;
-    //} else {
-    //  // mini game is tap
-    //  tapGame = true;
-    //}
+    float rand = Random.Range(0,2);
+    if (rand == 0f) {
+      // mini game is swipe
+      Debug.Log("Swipe Game");
+      swipeGame = true;
+    } else {
+      // mini game is tap
+      Debug.Log("Tap Game");
+      tapGame = true;
+    }
 
-    tapGame = true;
     return false;
   }
 
@@ -38,7 +42,7 @@ public class MiniGameController : MonoBehaviour {
     if (tapGame || swipeGame) {
       if (coolDown >= 0) {
         coolDown -= Time.deltaTime;
-        Debug.Log("Cooldown: " + coolDown);
+        //Debug.Log("Cooldown: " + coolDown);
       } else {
         tapGame = false;
         swipeGame = false;
@@ -51,6 +55,17 @@ public class MiniGameController : MonoBehaviour {
       taps++;
       if (taps == totalActions) {
         tapGame = false;
+        gm.EndSnakeMiniGame(true);
+      }
+    } else if (swipeGame && Input.GetMouseButtonDown(0)) {
+      Vector2 delta = new Vector2(Input.GetAxis("Mouse X"),Input.GetAxis("Mouse Y"))*40f;
+      Debug.Log("delta : " + delta);
+      if (delta.x != 0 || delta.y !=0) {
+        swipes++;
+      }
+      Debug.Log("swipe: " + swipes);
+      if (swipes == totalActions) {
+        swipeGame = false;
         gm.EndSnakeMiniGame(true);
       }
     }
