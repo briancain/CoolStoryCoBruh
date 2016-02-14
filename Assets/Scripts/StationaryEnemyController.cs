@@ -23,6 +23,8 @@ public class StationaryEnemyController : MonoBehaviour {
   private AudioSource audio;
   public AudioClip robotAlert;
   public AudioClip hover;
+  private float hoverTimeout = 0.5f;
+  private float hoverCooldown = 1f;
 
   /////////////////////////////////
   /// Unity Methods
@@ -45,13 +47,30 @@ public class StationaryEnemyController : MonoBehaviour {
       }
       UpdateFacing ();
       LineOfSight ();
+
+      if (hoverCooldown > 0) {
+        hoverCooldown += Time.deltaTime;
+        if (hoverCooldown >= hoverTimeout) {
+          hoverCooldown = 0.0f;
+        }
+      } else {
+        PlayHover();
+        hoverCooldown += Time.deltaTime;
+      }
+    }
+  }
+
+  void PlayHover() {
+    bool closeEnough = Vector2.Distance (gameObject.transform.position, player.transform.position) <= 15f;
+
+    if (closeEnough) {
+      audio.PlayOneShot(hover, 1.0F);
     }
   }
 
   // Send this enemy into an alert state
   public void Alert() {
     float playerDistance = Vector2.Distance(player.transform.position, gameObject.transform.position);
-    Debug.Log("Player Distance: " + playerDistance);
     if (playerDistance <= 5.0f) {
       audio.PlayOneShot(robotAlert, 0.7F);
     }
