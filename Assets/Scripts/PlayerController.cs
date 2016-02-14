@@ -31,11 +31,13 @@ public class PlayerController : MonoBehaviour {
   private bool hasKey = false;
   private Animator anim;
 
+  public GameObject rig;
+
   void Start() {
     rb = gameObject.GetComponent<Rigidbody2D> ();
     gm = GameObject.FindGameObjectWithTag (Tags.GAME_MANAGER).GetComponent<GameManager> ();
     aSource = gameObject.GetComponent<AudioSource> ();
-    anim = gameObject.GetComponent<Animator> ();
+    anim = rig.GetComponent<Animator> ();
 
     anim.SetBool ("Left Scarf", true);
 
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour {
     if (!miniGameHappening) {
       miniGameHappening = true;
       anim.SetBool ("Crouch", true);
+      anim.SetBool ("Snake Fight!", true);
       return true;
     } else {
       return false;
@@ -59,6 +62,7 @@ public class PlayerController : MonoBehaviour {
     Debug.Log("Mini game over, continuing player movement");
     if (miniGameHappening) {
       miniGameHappening = false;
+      anim.SetBool ("Snake Fight!", false);
       anim.SetBool ("Crouch", false);
       return true;
     } else {

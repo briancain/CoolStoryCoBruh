@@ -1,0 +1,2848 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Co-bruh_Snake_Fight_Dust
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -51.2087}
+        inSlope: {x: 0, y: 0, z: 180}
+        outSlope: {x: 0, y: 0, z: 180}
+        tangentMode: 0
+      - time: 2
+        value: {x: 0, y: 0, z: 308.7913}
+        inSlope: {x: 0, y: 0, z: 180}
+        outSlope: {x: 0, y: 0, z: 180}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -67.1972}
+        inSlope: {x: 0, y: 0, z: -179.99998}
+        outSlope: {x: 0, y: 0, z: -179.99998}
+        tangentMode: 0
+      - time: 2
+        value: {x: 0, y: 0, z: -427.19717}
+        inSlope: {x: 0, y: 0, z: -179.99998}
+        outSlope: {x: 0, y: 0, z: -179.99998}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 1.0036}
+        inSlope: {x: 0, y: 0, z: 83.8782}
+        outSlope: {x: 0, y: 0, z: 83.8782}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: 0, y: 0, z: 28.963}
+        inSlope: {x: 0, y: 0, z: 99.48435}
+        outSlope: {x: 0, y: 0, z: 99.48435}
+        tangentMode: 0
+      - time: 0.6666667
+        value: {x: 0, y: 0, z: 67.3265}
+        inSlope: {x: 0, y: 0, z: 115.09051}
+        outSlope: {x: 0, y: 0, z: 115.09051}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud_Star_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -0.3357}
+        inSlope: {x: 0, y: 0, z: -25.376175}
+        outSlope: {x: 0, y: 0, z: -25.376175}
+        tangentMode: 0
+      - time: 1.3333334
+        value: {x: 0, y: 0, z: -34.1706}
+        inSlope: {x: 0, y: 0, z: -67.07659}
+        outSlope: {x: 0, y: 0, z: -67.07659}
+        tangentMode: 0
+      - time: 1.6666666
+        value: {x: 0, y: 0, z: -70.429596}
+        inSlope: {x: 0, y: 0, z: -108.77701}
+        outSlope: {x: 0, y: 0, z: -108.77701}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud_Star_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -30.240398}
+        inSlope: {x: 0, y: 0, z: -7.9416046}
+        outSlope: {x: 0, y: 0, z: -7.9416046}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: 0, y: 0, z: -32.8876}
+        inSlope: {x: 0, y: 0, z: -7.9416046}
+        outSlope: {x: 0, y: 0, z: -7.9416046}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Knit
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0.331}
+        inSlope: {x: 0, y: 0, z: 37.30152}
+        outSlope: {x: 0, y: 0, z: 37.30152}
+        tangentMode: 0
+      - time: 0.8333333
+        value: {x: 0, y: 0, z: 31.4156}
+        inSlope: {x: 0, y: 0, z: 37.416656}
+        outSlope: {x: 0, y: 0, z: 37.416656}
+        tangentMode: 0
+      - time: 1
+        value: {x: 0, y: 0, z: 37.6709}
+        inSlope: {x: 0, y: 0, z: 23.351244}
+        outSlope: {x: 0, y: 0, z: 23.351244}
+        tangentMode: 0
+      - time: 1.3333334
+        value: {x: 0, y: 0, z: 40.7278}
+        inSlope: {x: 0, y: 0, z: 11.810705}
+        outSlope: {x: 0, y: 0, z: 11.810705}
+        tangentMode: 0
+      - time: 1.6666666
+        value: {x: 0, y: 0, z: 45.5447}
+        inSlope: {x: 0, y: 0, z: 14.45071}
+        outSlope: {x: 0, y: 0, z: 14.45071}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Purl
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.18501616, y: -0.055750966, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2
+        value: {x: -0.18501616, y: -0.055750966, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.18501616, y: -0.055750966, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2
+        value: {x: -0.18501616, y: -0.055750966, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.18501616, y: -0.055750966, z: 0}
+        inSlope: {x: -21.16495, y: 10.397253, z: 0}
+        outSlope: {x: -21.16495, y: 10.397253, z: 0}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: -7.24, y: 3.4100003, z: 0}
+        inSlope: {x: -15.037477, y: 5.8136263, z: 0}
+        outSlope: {x: -15.037477, y: 5.8136263, z: 0}
+        tangentMode: 0
+      - time: 0.6666667
+        value: {x: -10.210001, y: 3.8200002, z: 0}
+        inSlope: {x: -8.910004, y: 1.2299995, z: 0}
+        outSlope: {x: -8.910004, y: 1.2299995, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud_Star_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.18501616, y: -0.055750966, z: 0}
+        inSlope: {x: 2.8150163, y: 1.025751, z: 0}
+        outSlope: {x: 2.8150163, y: 1.025751, z: 0}
+        tangentMode: 0
+      - time: 1
+        value: {x: 2.63, y: 0.97, z: 0}
+        inSlope: {x: 9.417506, y: 4.607875, z: 0}
+        outSlope: {x: 9.417506, y: 4.607875, z: 0}
+        tangentMode: 0
+      - time: 1.3333334
+        value: {x: 7.97, y: 3.7, z: 0}
+        inSlope: {x: 10.815, y: 2.954999, z: 0}
+        outSlope: {x: 10.815, y: 2.954999, z: 0}
+        tangentMode: 0
+      - time: 1.6666666
+        value: {x: 9.84, y: 2.94, z: 0}
+        inSlope: {x: 5.6100025, y: -2.2800004, z: 0}
+        outSlope: {x: 5.6100025, y: -2.2800004, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud_Star_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.049999997, y: -0.055750966, z: 0}
+        inSlope: {x: 16.829998, y: 19.367252, z: 0}
+        outSlope: {x: 16.829998, y: 19.367252, z: 0}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: 5.66, y: 6.4, z: 0}
+        inSlope: {x: 8.565, y: 10.043626, z: 0}
+        outSlope: {x: 8.565, y: 10.043626, z: 0}
+        tangentMode: 0
+      - time: 0.6666667
+        value: {x: 5.76, y: 6.64, z: 0}
+        inSlope: {x: 0.30000114, y: 0.7199993, z: 0}
+        outSlope: {x: 0.30000114, y: 0.7199993, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Knit
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.18501616, y: -0.055750966, z: 0}
+        inSlope: {x: -1.7024758, y: 0.57862645, z: 0}
+        outSlope: {x: -1.7024758, y: 0.57862645, z: 0}
+        tangentMode: 0
+      - time: 0.6666667
+        value: {x: -1.32, y: 0.33, z: 0}
+        inSlope: {x: -5.321238, y: 5.209314, z: 0}
+        outSlope: {x: -5.321238, y: 5.209314, z: 0}
+        tangentMode: 0
+      - time: 1.1666666
+        value: {x: -5.79, y: 5.25, z: 0}
+        inSlope: {x: -4.8000007, y: 5.445, z: 0}
+        outSlope: {x: -4.8000007, y: 5.445, z: 0}
+        tangentMode: 0
+      - time: 1.5
+        value: {x: -6.01, y: 5.6, z: 0}
+        inSlope: {x: -0.66000074, y: 1.0499996, z: 0}
+        outSlope: {x: -0.66000074, y: 1.0499996, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Purl
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 5.425149, y: 5.425147, z: 5.425147}
+        inSlope: {x: 3.1412544, y: 3.1412559, z: 3.1412559}
+        outSlope: {x: 3.1412544, y: 3.1412559, z: 3.1412559}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: 6.472234, y: 6.4722323, z: 6.4722323}
+        inSlope: {x: 0.058406353, y: 0.058407784, z: 0.058407784}
+        outSlope: {x: 0.058406353, y: 0.058407784, z: 0.058407784}
+        tangentMode: 0
+      - time: 0.6666667
+        value: {x: 5.4640865, y: 5.4640856, z: 5.4640856}
+        inSlope: {x: -0.20084012, y: -0.20084012, z: -0.20084012}
+        outSlope: {x: -0.20084012, y: -0.20084012, z: -0.20084012}
+        tangentMode: 0
+      - time: 1
+        value: {x: 6.3383403, y: 6.338339, z: 6.338339}
+        inSlope: {x: 0.55078006, y: 0.55077934, z: 0.55077934}
+        outSlope: {x: 0.55078006, y: 0.55077934, z: 0.55077934}
+        tangentMode: 0
+      - time: 1.3333334
+        value: {x: 5.831273, y: 5.8312716, z: 5.8312716}
+        inSlope: {x: 0.062851965, y: 0.062850535, z: 0.062850535}
+        outSlope: {x: 0.062851965, y: 0.062850535, z: 0.062850535}
+        tangentMode: 0
+      - time: 1.6666666
+        value: {x: 6.3802414, y: 6.380239, z: 6.380239}
+        inSlope: {x: -0.6091859, y: -0.6091866, z: -0.6091866}
+        outSlope: {x: -0.6091859, y: -0.6091866, z: -0.6091866}
+        tangentMode: 0
+      - time: 2
+        value: {x: 5.425149, y: 5.425147, z: 5.425147}
+        inSlope: {x: -2.865277, y: -2.8652756, z: -2.8652756}
+        outSlope: {x: -2.865277, y: -2.8652756, z: -2.8652756}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 5.289123, y: 5.289123, z: 5.289123}
+        inSlope: {x: 4.76021, y: 4.76021, z: 4.76021}
+        outSlope: {x: 4.76021, y: 4.76021, z: 4.76021}
+        tangentMode: 0
+      - time: 0.16666667
+        value: {x: 6.0824914, y: 6.0824914, z: 6.0824914}
+        inSlope: {x: 3.5342832, y: 3.5342832, z: 3.5342832}
+        outSlope: {x: 3.5342832, y: 3.5342832, z: 3.5342832}
+        tangentMode: 0
+      - time: 0.5
+        value: {x: 6.8519435, y: 6.8519435, z: 6.8519435}
+        inSlope: {x: -2.3981318, y: -2.398131, z: -2.398131}
+        outSlope: {x: -2.3981318, y: -2.398131, z: -2.398131}
+        tangentMode: 0
+      - time: 0.8333333
+        value: {x: 4.483737, y: 4.4837375, z: 4.4837375}
+        inSlope: {x: -0.6283872, y: -0.62838507, z: -0.62838507}
+        outSlope: {x: -0.6283872, y: -0.62838507, z: -0.62838507}
+        tangentMode: 0
+      - time: 1.1666666
+        value: {x: 6.4330187, y: 6.43302, z: 6.43302}
+        inSlope: {x: 1.7997254, y: 1.7997283, z: 1.7997283}
+        outSlope: {x: 1.7997254, y: 1.7997283, z: 1.7997283}
+        tangentMode: 0
+      - time: 1.5
+        value: {x: 5.6835537, y: 5.683556, z: 5.683556}
+        inSlope: {x: -0.32160544, y: -0.3216033, z: -0.3216033}
+        outSlope: {x: -0.32160544, y: -0.3216033, z: -0.3216033}
+        tangentMode: 0
+      - time: 1.8333334
+        value: {x: 6.218615, y: 6.218618, z: 6.218618}
+        inSlope: {x: -1.9858848, y: -1.9858927, z: -1.9858927}
+        outSlope: {x: -1.9858848, y: -1.9858927, z: -1.9858927}
+        tangentMode: 0
+      - time: 2
+        value: {x: 5.289123, y: 5.289123, z: 5.289123}
+        inSlope: {x: -5.5769534, y: -5.5769706, z: -5.5769706}
+        outSlope: {x: -5.5769534, y: -5.5769706, z: -5.5769706}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: 
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 6, y: 6, z: 6}
+        outSlope: {x: 6, y: 6, z: 6}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: 3, y: 3, z: 3}
+        inSlope: {x: 6, y: 6, z: 6}
+        outSlope: {x: 6, y: 6, z: 6}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud_Star_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 1.5, y: 1.5, z: 1.5}
+        outSlope: {x: 1.5, y: 1.5, z: 1.5}
+        tangentMode: 0
+      - time: 1.3333334
+        value: {x: 3, y: 3, z: 3}
+        inSlope: {x: 1.5, y: 1.5, z: 1.5}
+        outSlope: {x: 1.5, y: 1.5, z: 1.5}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Fight_Cloud_Star_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 6.488853, y: 6.488855, z: 6.488855}
+        outSlope: {x: 6.488853, y: 6.488855, z: 6.488855}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: 3.162951, y: 3.1629517, z: 3.1629517}
+        inSlope: {x: 1.0959527, y: 1.0959532, z: 1.0959532}
+        outSlope: {x: 1.0959527, y: 1.0959532, z: 1.0959532}
+        tangentMode: 0
+      - time: 0.6666667
+        value: {x: 1.730635, y: 1.7306355, z: 1.7306355}
+        inSlope: {x: -4.2969475, y: -4.2969484, z: -4.2969484}
+        outSlope: {x: -4.2969475, y: -4.2969484, z: -4.2969484}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Knit
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0.47676653, y: 0.47676653, z: 0.47676653}
+        outSlope: {x: 0.47676653, y: 0.47676653, z: 0.47676653}
+        tangentMode: 0
+      - time: 0.8833333
+        value: {x: 1.4211438, y: 1.4211438, z: 1.4211438}
+        inSlope: {x: 2.3446488, y: 2.3446488, z: 2.3446488}
+        outSlope: {x: 2.3446488, y: 2.3446488, z: 2.3446488}
+        tangentMode: 0
+      - time: 1.1666666
+        value: {x: 2.614694, y: 2.614694, z: 2.614694}
+        inSlope: {x: 3.6697817, y: 3.6697824, z: 3.6697824}
+        outSlope: {x: 3.6697817, y: 3.6697824, z: 3.6697824}
+        tangentMode: 0
+      - time: 1.3333334
+        value: {x: 3.1358664, y: 3.1358666, z: 3.1358666}
+        inSlope: {x: -2.1368635, y: -2.1368635, z: -2.1368635}
+        outSlope: {x: -2.1368635, y: -2.1368635, z: -2.1368635}
+        tangentMode: 0
+      - time: 1.5
+        value: {x: 1.9024068, y: 1.9024068, z: 1.9024068}
+        inSlope: {x: -7.400759, y: -7.4007607, z: -7.4007607}
+        outSlope: {x: -7.400759, y: -7.4007607, z: -7.4007607}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Knit_Fight/Purl
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 2
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Co_Bruh_Torso
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 2
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Knit_Fight
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.6666667
+        value: 1
+        inSlope: 1.5
+        outSlope: 1.5
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: -1.4999999
+        outSlope: -1.4999999
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0.00000047683716
+        outSlope: 0.00000047683716
+        tangentMode: 10
+      - time: 1.6666666
+        value: 1
+        inSlope: 1.5000004
+        outSlope: 1.5000004
+        tangentMode: 10
+      - time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Fight_Cloud
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.516
+        inSlope: 2.904
+        outSlope: 2.904
+        tangentMode: 10
+      - time: 0.16666667
+        value: 1
+        inSlope: 1.452
+        outSlope: 1.452
+        tangentMode: 10
+      - time: 0.5
+        value: 1
+        inSlope: -1.5000001
+        outSlope: -1.5000001
+        tangentMode: 10
+      - time: 0.8333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.1666666
+        value: 1
+        inSlope: 1.5000001
+        outSlope: 1.5000001
+        tangentMode: 10
+      - time: 1.5
+        value: 1
+        inSlope: -1.4999999
+        outSlope: -1.4999999
+        tangentMode: 10
+      - time: 1.8333334
+        value: 0
+        inSlope: 0.048000455
+        outSlope: 0.048000455
+        tangentMode: 10
+      - time: 2
+        value: 0.516
+        inSlope: 3.0960007
+        outSlope: 3.0960007
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 3
+        outSlope: 3
+        tangentMode: 10
+      - time: 0.33333334
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.6666667
+        value: 0
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 1
+        inSlope: -1.5000004
+        outSlope: -1.5000004
+        tangentMode: 10
+      - time: 1.6666666
+        value: 0
+        inSlope: -3.0000007
+        outSlope: -3.0000007
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.33333334
+        value: 1
+        inSlope: -1.5
+        outSlope: -1.5
+        tangentMode: 10
+      - time: 0.6666667
+        value: 0
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Knit
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 1
+        inSlope: -3.0000007
+        outSlope: -3.0000007
+        tangentMode: 10
+      - time: 1.5
+        value: 0
+        inSlope: -6.0000014
+        outSlope: -6.0000014
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Purl
+    classID: 212
+    script: {fileID: 0}
+  m_PPtrCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 3639928636
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1107146374
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4274784245
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3556624438
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3870144425
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
+    - path: 2666382790
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
+    - path: 3639928636
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
+    - path: 1107146374
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
+    - path: 4274784245
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
+    - path: 3556624438
+      attribute: 4
+      script: {fileID: 0}
+      classID: 4
+      customType: 14
+      isPPtrCurve: 0
+    - path: 3870144425
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2666382790
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3639928636
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1107146374
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4274784245
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3556624438
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2065964666
+      attribute: 2086281974
+      script: {fileID: 0}
+      classID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - path: 493070290
+      attribute: 2086281974
+      script: {fileID: 0}
+      classID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3870144425
+      attribute: 304273561
+      script: {fileID: 0}
+      classID: 212
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2666382790
+      attribute: 304273561
+      script: {fileID: 0}
+      classID: 212
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3639928636
+      attribute: 304273561
+      script: {fileID: 0}
+      classID: 212
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1107146374
+      attribute: 304273561
+      script: {fileID: 0}
+      classID: 212
+      customType: 0
+      isPPtrCurve: 0
+    - path: 4274784245
+      attribute: 304273561
+      script: {fileID: 0}
+      classID: 212
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3556624438
+      attribute: 304273561
+      script: {fileID: 0}
+      classID: 212
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2666382790
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3870144425
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 0
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 2
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 2
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Co_Bruh_Torso
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 2
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: Knit_Fight
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 5.425149
+        inSlope: 3.1412544
+        outSlope: 3.1412544
+        tangentMode: 10
+      - time: 0.33333334
+        value: 6.472234
+        inSlope: 0.058406353
+        outSlope: 0.058406353
+        tangentMode: 10
+      - time: 0.6666667
+        value: 5.4640865
+        inSlope: -0.20084012
+        outSlope: -0.20084012
+        tangentMode: 10
+      - time: 1
+        value: 6.3383403
+        inSlope: 0.55078006
+        outSlope: 0.55078006
+        tangentMode: 10
+      - time: 1.3333334
+        value: 5.831273
+        inSlope: 0.062851965
+        outSlope: 0.062851965
+        tangentMode: 10
+      - time: 1.6666666
+        value: 6.3802414
+        inSlope: -0.6091859
+        outSlope: -0.6091859
+        tangentMode: 10
+      - time: 2
+        value: 5.425149
+        inSlope: -2.865277
+        outSlope: -2.865277
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 5.425147
+        inSlope: 3.1412559
+        outSlope: 3.1412559
+        tangentMode: 10
+      - time: 0.33333334
+        value: 6.4722323
+        inSlope: 0.058407784
+        outSlope: 0.058407784
+        tangentMode: 10
+      - time: 0.6666667
+        value: 5.4640856
+        inSlope: -0.20084012
+        outSlope: -0.20084012
+        tangentMode: 10
+      - time: 1
+        value: 6.338339
+        inSlope: 0.55077934
+        outSlope: 0.55077934
+        tangentMode: 10
+      - time: 1.3333334
+        value: 5.8312716
+        inSlope: 0.062850535
+        outSlope: 0.062850535
+        tangentMode: 10
+      - time: 1.6666666
+        value: 6.380239
+        inSlope: -0.6091866
+        outSlope: -0.6091866
+        tangentMode: 10
+      - time: 2
+        value: 5.425147
+        inSlope: -2.8652756
+        outSlope: -2.8652756
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 5.425147
+        inSlope: 3.1412559
+        outSlope: 3.1412559
+        tangentMode: 10
+      - time: 0.33333334
+        value: 6.4722323
+        inSlope: 0.058407784
+        outSlope: 0.058407784
+        tangentMode: 10
+      - time: 0.6666667
+        value: 5.4640856
+        inSlope: -0.20084012
+        outSlope: -0.20084012
+        tangentMode: 10
+      - time: 1
+        value: 6.338339
+        inSlope: 0.55077934
+        outSlope: 0.55077934
+        tangentMode: 10
+      - time: 1.3333334
+        value: 5.8312716
+        inSlope: 0.062850535
+        outSlope: 0.062850535
+        tangentMode: 10
+      - time: 1.6666666
+        value: 6.380239
+        inSlope: -0.6091866
+        outSlope: -0.6091866
+        tangentMode: 10
+      - time: 2
+        value: 5.425147
+        inSlope: -2.8652756
+        outSlope: -2.8652756
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -51.2087
+        inSlope: 180
+        outSlope: 180
+        tangentMode: 10
+      - time: 2
+        value: 308.7913
+        inSlope: 180
+        outSlope: 180
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.6666667
+        value: 1
+        inSlope: 1.5
+        outSlope: 1.5
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: -1.4999999
+        outSlope: -1.4999999
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0.00000047683716
+        outSlope: 0.00000047683716
+        tangentMode: 10
+      - time: 1.6666666
+        value: 1
+        inSlope: 1.5000004
+        outSlope: 1.5000004
+        tangentMode: 10
+      - time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Fight_Cloud
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 5.289123
+        inSlope: 4.76021
+        outSlope: 4.76021
+        tangentMode: 10
+      - time: 0.16666667
+        value: 6.0824914
+        inSlope: 3.5342832
+        outSlope: 3.5342832
+        tangentMode: 10
+      - time: 0.5
+        value: 6.8519435
+        inSlope: -2.3981318
+        outSlope: -2.3981318
+        tangentMode: 10
+      - time: 0.8333333
+        value: 4.483737
+        inSlope: -0.6283872
+        outSlope: -0.6283872
+        tangentMode: 10
+      - time: 1.1666666
+        value: 6.4330187
+        inSlope: 1.7997254
+        outSlope: 1.7997254
+        tangentMode: 10
+      - time: 1.5
+        value: 5.6835537
+        inSlope: -0.32160544
+        outSlope: -0.32160544
+        tangentMode: 10
+      - time: 1.8333334
+        value: 6.218615
+        inSlope: -1.9858848
+        outSlope: -1.9858848
+        tangentMode: 10
+      - time: 2
+        value: 5.289123
+        inSlope: -5.5769534
+        outSlope: -5.5769534
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 5.289123
+        inSlope: 4.76021
+        outSlope: 4.76021
+        tangentMode: 10
+      - time: 0.16666667
+        value: 6.0824914
+        inSlope: 3.5342832
+        outSlope: 3.5342832
+        tangentMode: 10
+      - time: 0.5
+        value: 6.8519435
+        inSlope: -2.398131
+        outSlope: -2.398131
+        tangentMode: 10
+      - time: 0.8333333
+        value: 4.4837375
+        inSlope: -0.62838507
+        outSlope: -0.62838507
+        tangentMode: 10
+      - time: 1.1666666
+        value: 6.43302
+        inSlope: 1.7997283
+        outSlope: 1.7997283
+        tangentMode: 10
+      - time: 1.5
+        value: 5.683556
+        inSlope: -0.3216033
+        outSlope: -0.3216033
+        tangentMode: 10
+      - time: 1.8333334
+        value: 6.218618
+        inSlope: -1.9858927
+        outSlope: -1.9858927
+        tangentMode: 10
+      - time: 2
+        value: 5.289123
+        inSlope: -5.5769706
+        outSlope: -5.5769706
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 5.289123
+        inSlope: 4.76021
+        outSlope: 4.76021
+        tangentMode: 10
+      - time: 0.16666667
+        value: 6.0824914
+        inSlope: 3.5342832
+        outSlope: 3.5342832
+        tangentMode: 10
+      - time: 0.5
+        value: 6.8519435
+        inSlope: -2.398131
+        outSlope: -2.398131
+        tangentMode: 10
+      - time: 0.8333333
+        value: 4.4837375
+        inSlope: -0.62838507
+        outSlope: -0.62838507
+        tangentMode: 10
+      - time: 1.1666666
+        value: 6.43302
+        inSlope: 1.7997283
+        outSlope: 1.7997283
+        tangentMode: 10
+      - time: 1.5
+        value: 5.683556
+        inSlope: -0.3216033
+        outSlope: -0.3216033
+        tangentMode: 10
+      - time: 1.8333334
+        value: 6.218618
+        inSlope: -1.9858927
+        outSlope: -1.9858927
+        tangentMode: 10
+      - time: 2
+        value: 5.289123
+        inSlope: -5.5769706
+        outSlope: -5.5769706
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -67.1972
+        inSlope: -179.99998
+        outSlope: -179.99998
+        tangentMode: 10
+      - time: 2
+        value: -427.19717
+        inSlope: -179.99998
+        outSlope: -179.99998
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: 
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.18501616
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: -0.18501616
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.055750966
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: -0.055750966
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.516
+        inSlope: 2.904
+        outSlope: 2.904
+        tangentMode: 10
+      - time: 0.16666667
+        value: 1
+        inSlope: 1.452
+        outSlope: 1.452
+        tangentMode: 10
+      - time: 0.5
+        value: 1
+        inSlope: -1.5000001
+        outSlope: -1.5000001
+        tangentMode: 10
+      - time: 0.8333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.1666666
+        value: 1
+        inSlope: 1.5000001
+        outSlope: 1.5000001
+        tangentMode: 10
+      - time: 1.5
+        value: 1
+        inSlope: -1.4999999
+        outSlope: -1.4999999
+        tangentMode: 10
+      - time: 1.8333334
+        value: 0
+        inSlope: 0.048000455
+        outSlope: 0.048000455
+        tangentMode: 10
+      - time: 2
+        value: 0.516
+        inSlope: 3.0960007
+        outSlope: 3.0960007
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.18501616
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: -0.18501616
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.055750966
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: -0.055750966
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 3
+        outSlope: 3
+        tangentMode: 10
+      - time: 0.33333334
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.6666667
+        value: 0
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.18501616
+        inSlope: -21.16495
+        outSlope: -21.16495
+        tangentMode: 10
+      - time: 0.33333334
+        value: -7.24
+        inSlope: -15.037477
+        outSlope: -15.037477
+        tangentMode: 10
+      - time: 0.6666667
+        value: -10.210001
+        inSlope: -8.910004
+        outSlope: -8.910004
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.055750966
+        inSlope: 10.397253
+        outSlope: 10.397253
+        tangentMode: 10
+      - time: 0.33333334
+        value: 3.4100003
+        inSlope: 5.8136263
+        outSlope: 5.8136263
+        tangentMode: 10
+      - time: 0.6666667
+        value: 3.8200002
+        inSlope: 1.2299995
+        outSlope: 1.2299995
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.6666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 6
+        outSlope: 6
+        tangentMode: 10
+      - time: 0.33333334
+        value: 3
+        inSlope: 6
+        outSlope: 6
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 6
+        outSlope: 6
+        tangentMode: 10
+      - time: 0.33333334
+        value: 3
+        inSlope: 6
+        outSlope: 6
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 6
+        outSlope: 6
+        tangentMode: 10
+      - time: 0.33333334
+        value: 3
+        inSlope: 6
+        outSlope: 6
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.6666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.6666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1.0036
+        inSlope: 83.8782
+        outSlope: 83.8782
+        tangentMode: 10
+      - time: 0.33333334
+        value: 28.963
+        inSlope: 99.48435
+        outSlope: 99.48435
+        tangentMode: 10
+      - time: 0.6666667
+        value: 67.3265
+        inSlope: 115.09051
+        outSlope: 115.09051
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.18501616
+        inSlope: 2.8150163
+        outSlope: 2.8150163
+        tangentMode: 10
+      - time: 1
+        value: 2.63
+        inSlope: 9.417506
+        outSlope: 9.417506
+        tangentMode: 10
+      - time: 1.3333334
+        value: 7.97
+        inSlope: 10.815
+        outSlope: 10.815
+        tangentMode: 10
+      - time: 1.6666666
+        value: 9.84
+        inSlope: 5.6100025
+        outSlope: 5.6100025
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.055750966
+        inSlope: 1.025751
+        outSlope: 1.025751
+        tangentMode: 10
+      - time: 1
+        value: 0.97
+        inSlope: 4.607875
+        outSlope: 4.607875
+        tangentMode: 10
+      - time: 1.3333334
+        value: 3.7
+        inSlope: 2.954999
+        outSlope: 2.954999
+        tangentMode: 10
+      - time: 1.6666666
+        value: 2.94
+        inSlope: -2.2800004
+        outSlope: -2.2800004
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.6666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 1.5
+        outSlope: 1.5
+        tangentMode: 10
+      - time: 1.3333334
+        value: 3
+        inSlope: 1.5
+        outSlope: 1.5
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 1.5
+        outSlope: 1.5
+        tangentMode: 10
+      - time: 1.3333334
+        value: 3
+        inSlope: 1.5
+        outSlope: 1.5
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 1.5
+        outSlope: 1.5
+        tangentMode: 10
+      - time: 1.3333334
+        value: 3
+        inSlope: 1.5
+        outSlope: 1.5
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 1
+        inSlope: -1.5000004
+        outSlope: -1.5000004
+        tangentMode: 10
+      - time: 1.6666666
+        value: 0
+        inSlope: -3.0000007
+        outSlope: -3.0000007
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.6666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.6666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.3357
+        inSlope: -25.376175
+        outSlope: -25.376175
+        tangentMode: 10
+      - time: 1.3333334
+        value: -34.1706
+        inSlope: -67.07659
+        outSlope: -67.07659
+        tangentMode: 10
+      - time: 1.6666666
+        value: -70.429596
+        inSlope: -108.77701
+        outSlope: -108.77701
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.049999997
+        inSlope: 16.829998
+        outSlope: 16.829998
+        tangentMode: 10
+      - time: 0.33333334
+        value: 5.66
+        inSlope: 8.565
+        outSlope: 8.565
+        tangentMode: 10
+      - time: 0.6666667
+        value: 5.76
+        inSlope: 0.30000114
+        outSlope: 0.30000114
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.055750966
+        inSlope: 19.367252
+        outSlope: 19.367252
+        tangentMode: 10
+      - time: 0.33333334
+        value: 6.4
+        inSlope: 10.043626
+        outSlope: 10.043626
+        tangentMode: 10
+      - time: 0.6666667
+        value: 6.64
+        inSlope: 0.7199993
+        outSlope: 0.7199993
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.6666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.33333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -30.240398
+        inSlope: -7.9416046
+        outSlope: -7.9416046
+        tangentMode: 10
+      - time: 0.33333334
+        value: -32.8876
+        inSlope: -7.9416046
+        outSlope: -7.9416046
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 6.488853
+        outSlope: 6.488853
+        tangentMode: 10
+      - time: 0.33333334
+        value: 3.162951
+        inSlope: 1.0959527
+        outSlope: 1.0959527
+        tangentMode: 10
+      - time: 0.6666667
+        value: 1.730635
+        inSlope: -4.2969475
+        outSlope: -4.2969475
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 6.488855
+        outSlope: 6.488855
+        tangentMode: 10
+      - time: 0.33333334
+        value: 3.1629517
+        inSlope: 1.0959532
+        outSlope: 1.0959532
+        tangentMode: 10
+      - time: 0.6666667
+        value: 1.7306355
+        inSlope: -4.2969484
+        outSlope: -4.2969484
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 6.488855
+        outSlope: 6.488855
+        tangentMode: 10
+      - time: 0.33333334
+        value: 3.1629517
+        inSlope: 1.0959532
+        outSlope: 1.0959532
+        tangentMode: 10
+      - time: 0.6666667
+        value: 1.7306355
+        inSlope: -4.2969484
+        outSlope: -4.2969484
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.33333334
+        value: 1
+        inSlope: -1.5
+        outSlope: -1.5
+        tangentMode: 10
+      - time: 0.6666667
+        value: 0
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Knit
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.8333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.6666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.8333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.6666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.331
+        inSlope: 37.30152
+        outSlope: 37.30152
+        tangentMode: 10
+      - time: 0.8333333
+        value: 31.4156
+        inSlope: 37.416656
+        outSlope: 37.416656
+        tangentMode: 10
+      - time: 1
+        value: 37.6709
+        inSlope: 23.351244
+        outSlope: 23.351244
+        tangentMode: 10
+      - time: 1.3333334
+        value: 40.7278
+        inSlope: 11.810705
+        outSlope: 11.810705
+        tangentMode: 10
+      - time: 1.6666666
+        value: 45.5447
+        inSlope: 14.45071
+        outSlope: 14.45071
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.18501616
+        inSlope: -1.7024758
+        outSlope: -1.7024758
+        tangentMode: 10
+      - time: 0.6666667
+        value: -1.32
+        inSlope: -5.321238
+        outSlope: -5.321238
+        tangentMode: 10
+      - time: 1.1666666
+        value: -5.79
+        inSlope: -4.8000007
+        outSlope: -4.8000007
+        tangentMode: 10
+      - time: 1.5
+        value: -6.01
+        inSlope: -0.66000074
+        outSlope: -0.66000074
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -0.055750966
+        inSlope: 0.57862645
+        outSlope: 0.57862645
+        tangentMode: 10
+      - time: 0.6666667
+        value: 0.33
+        inSlope: 5.209314
+        outSlope: 5.209314
+        tangentMode: 10
+      - time: 1.1666666
+        value: 5.25
+        inSlope: 5.445
+        outSlope: 5.445
+        tangentMode: 10
+      - time: 1.5
+        value: 5.6
+        inSlope: 1.0499996
+        outSlope: 1.0499996
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.6666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.1666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0.47676653
+        outSlope: 0.47676653
+        tangentMode: 10
+      - time: 0.8833333
+        value: 1.4211438
+        inSlope: 2.3446488
+        outSlope: 2.3446488
+        tangentMode: 10
+      - time: 1.1666666
+        value: 2.614694
+        inSlope: 3.6697817
+        outSlope: 3.6697817
+        tangentMode: 10
+      - time: 1.3333334
+        value: 3.1358664
+        inSlope: -2.1368635
+        outSlope: -2.1368635
+        tangentMode: 10
+      - time: 1.5
+        value: 1.9024068
+        inSlope: -7.400759
+        outSlope: -7.400759
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.x
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0.47676653
+        outSlope: 0.47676653
+        tangentMode: 10
+      - time: 0.8833333
+        value: 1.4211438
+        inSlope: 2.3446488
+        outSlope: 2.3446488
+        tangentMode: 10
+      - time: 1.1666666
+        value: 2.614694
+        inSlope: 3.6697824
+        outSlope: 3.6697824
+        tangentMode: 10
+      - time: 1.3333334
+        value: 3.1358666
+        inSlope: -2.1368635
+        outSlope: -2.1368635
+        tangentMode: 10
+      - time: 1.5
+        value: 1.9024068
+        inSlope: -7.4007607
+        outSlope: -7.4007607
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.y
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0.47676653
+        outSlope: 0.47676653
+        tangentMode: 10
+      - time: 0.8833333
+        value: 1.4211438
+        inSlope: 2.3446488
+        outSlope: 2.3446488
+        tangentMode: 10
+      - time: 1.1666666
+        value: 2.614694
+        inSlope: 3.6697824
+        outSlope: 3.6697824
+        tangentMode: 10
+      - time: 1.3333334
+        value: 3.1358666
+        inSlope: -2.1368635
+        outSlope: -2.1368635
+        tangentMode: 10
+      - time: 1.5
+        value: 1.9024068
+        inSlope: -7.4007607
+        outSlope: -7.4007607
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalScale.z
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1.3333334
+        value: 1
+        inSlope: -3.0000007
+        outSlope: -3.0000007
+        tangentMode: 10
+      - time: 1.5
+        value: 0
+        inSlope: -6.0000014
+        outSlope: -6.0000014
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Knit_Fight/Purl
+    classID: 212
+    script: {fileID: 0}
+  m_EulerEditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Knit_Fight/Fight_Cloud_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Knit_Fight/Fight_Cloud
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Knit_Fight/Fight_Cloud_Star_1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Knit_Fight/Fight_Cloud_Star_2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Knit_Fight/Knit
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Knit_Fight/Purl
+    classID: 4
+    script: {fileID: 0}
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events: []
