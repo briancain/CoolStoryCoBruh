@@ -21,6 +21,7 @@ public class EnemyController : StationaryEnemyController {
     base.Start ();
     rb = gameObject.GetComponent<Rigidbody2D> ();
     facing = (waypoints [currWaypoint].transform.position - gameObject.transform.position).normalized;
+    anim.speed = 5;
 	}
 	
 	void Update () {
@@ -55,10 +56,11 @@ public class EnemyController : StationaryEnemyController {
       rb.position = Vector2.MoveTowards (gameObject.transform.position, dest.transform.position, enemySpeed * Time.deltaTime);
 
     } else {
-      // Make sure teh enemy stops for a certain time before moving to the next waypoint
+      // Make sure the enemy stops for a certain time before moving to the next waypoint
       stopTimer += Time.deltaTime;
       if (stopTimer >= wp.waitTime) {
         moving = true;
+        anim.speed = 5;
         stopTimer = 0f;
         if (currWaypoint == 0 || currWaypoint == waypoints.Length - 1) {
           forwardPath = !forwardPath;
@@ -79,6 +81,7 @@ public class EnemyController : StationaryEnemyController {
       print ("Should stop");
       moving = false;
       facing = wp.directionToLook;
+      anim.speed = 1;
     }
   }
 }
