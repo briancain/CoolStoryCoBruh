@@ -970,6 +970,10 @@ Prefab:
       propertyPath: rig
       value: 
       objectReference: {fileID: 2121888870}
+    - target: {fileID: 2053476, guid: 7b6d9d02db3fb41e9bbc9a6025a2cf00, type: 2}
+      propertyPath: orthographic size
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b6d9d02db3fb41e9bbc9a6025a2cf00, type: 2}
   m_IsPrefabParent: 0
