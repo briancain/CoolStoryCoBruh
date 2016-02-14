@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour {
 
   public GameObject rig;
 
+  public GameObject tongueLeft;
+  public GameObject tongueRight;
+
   void Start() {
     rb = gameObject.GetComponent<Rigidbody2D> ();
     gm = GameObject.FindGameObjectWithTag (Tags.GAME_MANAGER).GetComponent<GameManager> ();
@@ -44,6 +47,9 @@ public class PlayerController : MonoBehaviour {
     miniGameHappening = false;
     gameOver = false;
     moving = false;
+
+    tongueLeft.transform.localScale = new Vector3(0f,1f,1f);
+    tongueRight.transform.localScale = new Vector3(0f,1f,1f);
   }
 
   public bool startMiniGameMode(){
@@ -105,7 +111,16 @@ public class PlayerController : MonoBehaviour {
   }
 
   public void ScarfSwitched() {
+
+    if (snakeChange > 0) {
+      tongueRight.transform.localScale = new Vector3(0f,1f,1f);
+    } else {
+      tongueLeft.transform.localScale = new Vector3(0f,1f,1f);
+    }
+
     snakeChange *= -1;
+
+    snakeState = 0f;
     if (snakeChange < 0) {
       anim.SetBool ("Left Scarf", false);
       anim.SetBool ("Right Scarf", true);
@@ -150,11 +165,21 @@ public class PlayerController : MonoBehaviour {
 
   private void UpdateSnakeState() {
     snakeState += rateOfChange * Time.deltaTime * snakeChange;
+
+    //Debug.Log("snake state: " + snakeState);
+
     if (snakeState > 0) {
       snakeState = Mathf.Min (snakeState, snakeStateMax);
+
+      Vector3 oldScale = tongueRight.transform.localScale;
+      tongueRight.transform.localScale = new Vector3((snakeState/100),oldScale.y, oldScale.x);
     } else {
       snakeState = Mathf.Max (snakeState, snakeStateMin);
+
+      Vector3 oldScale = tongueLeft.transform.localScale;
+      tongueLeft.transform.localScale = new Vector3((Mathf.Abs(snakeState)/100),oldScale.y, oldScale.x);
     }
+
 
     if (snakeState == snakeStateMax || snakeState == snakeStateMin) {
       gm.AlertEnemies ();

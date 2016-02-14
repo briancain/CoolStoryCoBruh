@@ -11,6 +11,8 @@ TagManager:
   - Key
   - Door
   - SnakeBar
+  - TongueLeft
+  - TongueRight
   layers:
   - Default
   - TransparentFX
