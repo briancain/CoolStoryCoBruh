@@ -147,6 +147,10 @@ public class PlayerController : MonoBehaviour {
       hasKey = true;
       Destroy(coll.gameObject);
     }
+
+    if (coll.gameObject.tag == Tags.DOOR && hasKey) {
+      Destroy(coll.gameObject);
+    }
   }
 
 }
