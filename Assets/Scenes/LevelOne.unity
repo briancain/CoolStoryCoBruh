@@ -196,6 +196,7 @@ MonoBehaviour:
   continueGameTheme: {fileID: 8300000, guid: ddd885d3946ff44b2883c72119386bb8, type: 3}
   alertTheme: {fileID: 8300000, guid: d428c44b3c6d84cbdb1fcd53dd0928aa, type: 3}
   gameOverTheme: {fileID: 8300000, guid: 3a6e73e4880c84e709453747f20277f1, type: 3}
+  loseMiniGameTheme: {fileID: 8300000, guid: 716cab9aef1884d1f9058d4e9266329f, type: 3}
   gameOverText: {fileID: 861781678}
 --- !u!4 &141105236
 Transform:

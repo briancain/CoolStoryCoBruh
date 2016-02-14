@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour {
   public AudioClip alertTheme;
   public AudioClip gameOverTheme;
 
+  public AudioClip loseMiniGameTheme;
+
   public Text gameOverText;
 
   // Use this for initialization
@@ -89,9 +91,12 @@ public class GameManager : MonoBehaviour {
     if(win) {
       Debug.Log("Player Won");
       player.GetComponent<PlayerController>().ScarfSwitched();
+      audio.Stop();
       EndAlertEnemies();
     } else {
       Debug.Log("Player Lost");
+      audio.Stop();
+      audio.PlayOneShot(loseMiniGameTheme, 0.7F);
       AlertEnemies();
     }
   }
@@ -121,7 +126,6 @@ public class GameManager : MonoBehaviour {
         obj.GetComponent<StationaryEnemyController>().Alert();
       }
     }
-    audio.Stop();
     audio.PlayOneShot(alertTheme, 1.0F);
   }
 
@@ -132,7 +136,6 @@ public class GameManager : MonoBehaviour {
       }
     }
 
-    audio.Stop();
     audio.PlayOneShot(continueGameTheme, 1.0F);
   }
 }
