@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 
   public float snakeState = 0;
   private float rateOfChange = 2f;
-  private int snakeChange = 1;
+  public int snakeChange = 1;
   private float snakeStateMax = 100f;
   private float snakeStateMin = -100f;
 

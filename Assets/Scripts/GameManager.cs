@@ -22,9 +22,12 @@ public class GameManager : MonoBehaviour {
   // Update is called once per frame
   void Update () {
     float playerSnakeState = player.GetComponent<PlayerController>().snakeState;
+    float playerSnakeChange = player.GetComponent<PlayerController>().snakeChange;
     float absPlSnakeState = Mathf.Abs(playerSnakeState);
     if (Input.GetKey(KeyCode.Space) && !miniGameOngoing
-        && (absPlSnakeState >= 70 && absPlSnakeState <= 100)) {
+        && (absPlSnakeState >= 10 && absPlSnakeState <= 100)
+        && ((playerSnakeChange > 0 && playerSnakeState > 0)
+            || (playerSnakeChange < 0 && playerSnakeState < 0))) {
       miniGameOngoing = true;
       InitSnakeMiniGame();
     }
@@ -58,8 +61,10 @@ public class GameManager : MonoBehaviour {
     if(win) {
       Debug.Log("Player Won");
       player.GetComponent<PlayerController>().ScarfSwitched();
+      EndAlertEnemies();
     } else {
       Debug.Log("Player Lost");
+      AlertEnemies();
     }
   }
 
@@ -75,7 +80,7 @@ public class GameManager : MonoBehaviour {
   public void AlertEnemies() {
     foreach (GameObject obj in enemies) {
       if (obj != null) {
-          //obj.Alert();
+        obj.GetComponent<StationaryEnemyController>().Alert();
       }
     }
   }
@@ -83,7 +88,7 @@ public class GameManager : MonoBehaviour {
   void EndAlertEnemies() {
     foreach (GameObject obj in enemies) {
       if (obj != null) {
-          //obj.EndAlert();
+        obj.GetComponent<StationaryEnemyController>().EndAlert();
       }
     }
   }
