@@ -76,7 +76,8 @@ public class GameManager : MonoBehaviour {
     }
 
     // Method takes number of actions to complete game
-    miniGameController.StartGame(3);
+    float randGame = Random.Range(0,2);
+    miniGameController.StartGame(3, randGame);
 
   }
 

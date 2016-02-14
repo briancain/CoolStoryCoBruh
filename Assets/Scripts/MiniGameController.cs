@@ -18,15 +18,14 @@ public class MiniGameController : MonoBehaviour {
     Left, Right
   };
 
-  public bool StartGame(int total) {
+  public bool StartGame(int total, float randGame) {
     coolDown = 3.0f;
     totalActions = total;
     gm = GameObject.FindGameObjectWithTag(Tags.GAME_MANAGER).GetComponent<GameManager>();
     swipeGame = false;
     tapGame = false;
 
-    float rand = Random.Range(0,2);
-    if (rand == 0f) {
+    if (randGame == 0f) {
       // mini game is swipe
       Debug.Log("Swipe Game");
       swipeGame = true;
@@ -58,6 +57,7 @@ public class MiniGameController : MonoBehaviour {
       }
     } else if (swipeGame && Input.GetMouseButtonDown(0)) {
       Vector2 delta = new Vector2(Input.GetAxis("Mouse X"),Input.GetAxis("Mouse Y"))*40f;
+      Debug.Log("Swipe Delta: " + delta);
       if (delta.x != 0 || delta.y !=0) {
         swipes++;
       }
