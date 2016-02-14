@@ -28,10 +28,13 @@ public class PlayerController : MonoBehaviour {
 
   public AudioClip footsteps;
 
+  private Animator anim;
+
   void Start() {
     rb = gameObject.GetComponent<Rigidbody2D> ();
     gm = GameObject.FindGameObjectWithTag (Tags.GAME_MANAGER).GetComponent<GameManager> ();
     aSource = gameObject.GetComponent<AudioSource> ();
+    anim = gameObject.GetComponent<Animator> ();
 
     miniGameHappening = false;
     gameOver = false;
@@ -109,8 +112,10 @@ public class PlayerController : MonoBehaviour {
         Vector3 scale = gameObject.transform.localScale;
         gameObject.transform.localScale = new Vector3 (0.25f, scale.y, scale.z);
       }
+      anim.SetBool ("Tiptoe", true);
     } else {
       moving = false;
+      anim.SetBool ("Tiptoe", false);
     }
   }
 
