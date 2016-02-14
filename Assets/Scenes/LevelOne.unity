@@ -960,7 +960,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 459340, guid: 7b6d9d02db3fb41e9bbc9a6025a2cf00, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 11402806, guid: 7b6d9d02db3fb41e9bbc9a6025a2cf00, type: 2}
       propertyPath: debug
@@ -1837,7 +1837,7 @@ Transform:
   m_LocalScale: {x: 3.6771183, y: 2.6147685, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!1001 &1576125949
 Prefab:
   m_ObjectHideFlags: 0
@@ -2441,6 +2441,10 @@ Prefab:
     - target: {fileID: 459740, guid: 20ea7025b3d1e4be1b6e38f1b768ea3b, type: 2}
       propertyPath: m_LocalScale.y
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 147724, guid: 20ea7025b3d1e4be1b6e38f1b768ea3b, type: 2}
+      propertyPath: m_TagString
+      value: SnakeBar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20ea7025b3d1e4be1b6e38f1b768ea3b, type: 2}

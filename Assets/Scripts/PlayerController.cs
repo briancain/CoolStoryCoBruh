@@ -126,10 +126,18 @@ public class PlayerController : MonoBehaviour {
       moving = true;
       if (xVel > 0) {
         Vector3 scale = gameObject.transform.localScale;
+
+        GameObject uiObj = GameObject.FindGameObjectWithTag("SnakeBar");
+        uiObj.transform.parent = null;
         gameObject.transform.localScale = new Vector3 (-0.25f, scale.y, scale.z);
+        uiObj.transform.parent = gameObject.transform;
       } else if (xVel < 0) {
         Vector3 scale = gameObject.transform.localScale;
+
+        GameObject uiObj = GameObject.FindGameObjectWithTag("SnakeBar");
+        uiObj.transform.parent = null;
         gameObject.transform.localScale = new Vector3 (0.25f, scale.y, scale.z);
+        uiObj.transform.parent = gameObject.transform;
       }
       anim.SetBool ("Tiptoe", true);
       anim.SetBool ("Head Careful", true);
