@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 
   private bool miniGameHappening;
 
-  private float snakeState = 0;
+  public float snakeState = 0;
   private float rateOfChange = 2f;
   private int snakeChange = 1;
   private float snakeStateMax = 100f;
@@ -82,4 +82,5 @@ public class PlayerController : MonoBehaviour {
 
     debug.text = "Snake State: " + (snakeState < 0 ? Mathf.Ceil (snakeState) : Mathf.Floor (snakeState));
   }
+
 }

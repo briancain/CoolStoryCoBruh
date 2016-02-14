@@ -21,7 +21,10 @@ public class GameManager : MonoBehaviour {
   }
   // Update is called once per frame
   void Update () {
-    if (Input.GetKey(KeyCode.Space) && !miniGameOngoing) {
+    float playerSnakeState = player.GetComponent<PlayerController>().snakeState;
+    float absPlSnakeState = Mathf.Abs(playerSnakeState);
+    if (Input.GetKey(KeyCode.Space) && !miniGameOngoing
+        && (absPlSnakeState >= 70 && absPlSnakeState <= 100)) {
       miniGameOngoing = true;
       InitSnakeMiniGame();
     }
@@ -37,6 +40,7 @@ public class GameManager : MonoBehaviour {
       Debug.Log("Game manager could not stop player movement");
     }
 
+    // Method takes number of actions to complete game
     miniGameController.StartGame(3);
 
   }
@@ -53,6 +57,7 @@ public class GameManager : MonoBehaviour {
 
     if(win) {
       Debug.Log("Player Won");
+      player.GetComponent<PlayerController>().ScarfSwitched();
     } else {
       Debug.Log("Player Lost");
     }
