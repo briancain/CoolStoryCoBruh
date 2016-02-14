@@ -986,6 +986,10 @@ Prefab:
       propertyPath: tongueRight
       value: 
       objectReference: {fileID: 469527886}
+    - target: {fileID: 11402806, guid: 7b6d9d02db3fb41e9bbc9a6025a2cf00, type: 2}
+      propertyPath: keyPickup
+      value: 
+      objectReference: {fileID: 8300000, guid: 33686713db6ae458cb5997ec6b7f1e50, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b6d9d02db3fb41e9bbc9a6025a2cf00, type: 2}
   m_IsPrefabParent: 0

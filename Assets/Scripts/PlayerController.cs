@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour {
   private AudioSource aSource;
 
   public AudioClip footsteps;
+  public AudioClip keyPickup;
 
   private bool hasKey = false;
   private Animator anim;
@@ -201,6 +202,7 @@ public class PlayerController : MonoBehaviour {
 
   void OnCollisionEnter2D(Collision2D coll) {
     if (coll.gameObject.tag == Tags.KEY) {
+      aSource.PlayOneShot(keyPickup,1.0f);
       Debug.Log("Player got key");
       hasKey = true;
       Destroy(coll.gameObject);
