@@ -49,6 +49,9 @@ public class PlayerController : MonoBehaviour {
   void Update () {
     if (!miniGameHappening) {
       Move();
+    } else {
+      // make sure player isn't moving
+      rb.velocity = new Vector2(0,0);
     }
     UpdateSnakeState ();
   }

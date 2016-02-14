@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour {
       Debug.Log("Game manager could not stop player movement");
     }
 
-    miniGameController.StartGame();
+    miniGameController.StartGame(6);
 
   }
 
