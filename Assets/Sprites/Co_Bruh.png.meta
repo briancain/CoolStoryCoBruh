@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e800849725c1d4b5893618c005bfe3af
-timeCreated: 1455438960
+timeCreated: 1455469537
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -27,6 +27,7 @@ TextureImporter:
     21300040: Fight_Cloud_Star_2
     21300042: Knit
     21300044: Purl
+    21300046: Co_Bruh_Face_Careful
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -861,6 +862,36 @@ TextureImporter:
         - {x: 251.93677, y: -95.2856}
         - {x: 251.93677, y: 62.7144}
         - {x: 214.93677, y: 79.7144}
+    - name: Co_Bruh_Face_Careful
+      rect:
+        serializedVersion: 2
+        x: 2091
+        y: 740
+        width: 312
+        height: 417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.552856, y: -90.79199}
+        - {x: -43.552856, y: -118.79199}
+        - {x: -43.552856, y: -130.79199}
+        - {x: 75.44714, y: -154.79199}
+        - {x: 113.44714, y: -154.79199}
+        - {x: 123.44714, y: -142.79199}
+        - {x: 123.44714, y: -100.79199}
+        - {x: 85.44714, y: -90.79199}
+      - - {x: -91.55286, y: 135.20801}
+        - {x: -111.55286, y: 117.20801}
+        - {x: -111.55286, y: 48.208008}
+        - {x: -109.55286, y: 37.208008}
+        - {x: -77.55286, y: 25.208008}
+        - {x: -54.552856, y: 26.208008}
+        - {x: -45.552856, y: -35.791992}
+        - {x: -9.552856, y: -35.791992}
+        - {x: 97.44714, y: 22.208008}
+        - {x: 97.44714, y: 113.20801}
+        - {x: 91.44714, y: 135.20801}
     outline: []
   spritePackingTag: 
   userData: 
