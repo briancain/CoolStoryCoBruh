@@ -98,7 +98,7 @@ public class StationaryEnemyController : MonoBehaviour {
       RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, toPlayer, losDistance, ~Layers.CreateLayerMask(Layers.IGNORE_RAYCAST));
       if (hit != null && hit.collider.gameObject.tag == Tags.PLAYER) {
         audio.PlayOneShot(robotAlert, 0.7F);
-        //gm.GameOver ();
+        gm.GameOver ();
       }
     }
   }
