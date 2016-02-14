@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour {
     aSource = gameObject.GetComponent<AudioSource> ();
     anim = gameObject.GetComponent<Animator> ();
 
+    anim.SetBool ("Left Scarf", true);
+
     miniGameHappening = false;
     gameOver = false;
     moving = false;
@@ -46,6 +48,7 @@ public class PlayerController : MonoBehaviour {
     Debug.Log("Starting mini game, halting player movement");
     if (!miniGameHappening) {
       miniGameHappening = true;
+      anim.SetBool ("Crouch", true);
       return true;
     } else {
       return false;
@@ -56,6 +59,7 @@ public class PlayerController : MonoBehaviour {
     Debug.Log("Mini game over, continuing player movement");
     if (miniGameHappening) {
       miniGameHappening = false;
+      anim.SetBool ("Crouch", false);
       return true;
     } else {
       return false;
@@ -114,9 +118,11 @@ public class PlayerController : MonoBehaviour {
         gameObject.transform.localScale = new Vector3 (0.25f, scale.y, scale.z);
       }
       anim.SetBool ("Tiptoe", true);
+      anim.SetBool ("Head Careful", true);
     } else {
       moving = false;
       anim.SetBool ("Tiptoe", false);
+      anim.SetBool ("Head Careful", false);
     }
   }
 
