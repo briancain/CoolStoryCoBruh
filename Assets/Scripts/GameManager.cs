@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour {
   public AudioClip gameTheme;
   public AudioClip continueGameTheme;
   public AudioClip alertTheme;
+  public AudioClip gameOverTheme;
 
   public Text gameOverText;
 
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour {
     audio.PlayOneShot(gameTheme, 1.0F);
 
     gameOver = false;
-    gameOverTime = 2.0f;
+    gameOverTime = 8.0f;
     gameOverTimer = 0.0f;
   }
   // Update is called once per frame
@@ -105,6 +106,9 @@ public class GameManager : MonoBehaviour {
         obj.GetComponent<StationaryEnemyController>().GameOver();
       }
     }
+
+    audio.Stop();
+    audio.PlayOneShot(gameOverTheme, 1.0F);
   }
 
   public void WinGame() {
