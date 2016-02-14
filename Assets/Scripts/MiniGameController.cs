@@ -15,6 +15,10 @@ public class MiniGameController : MonoBehaviour {
   private float coolDown;
   private GameManager gm;
 
+  private enum SwipeDir {
+    Left, Right
+  };
+
   public bool StartGame(int total) {
     coolDown = 3.0f;
     totalActions = total;
