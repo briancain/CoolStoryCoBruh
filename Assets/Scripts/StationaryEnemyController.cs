@@ -71,6 +71,7 @@ public class StationaryEnemyController : MonoBehaviour {
   // Send this enemy into an alert state
   public void Alert() {
     float playerDistance = Vector2.Distance(player.transform.position, gameObject.transform.position);
+    Debug.Log("player distance: " + playerDistance);
     if (playerDistance <= 5.0f) {
       audio.PlayOneShot(robotAlert, 0.7F);
     }
@@ -97,7 +98,7 @@ public class StationaryEnemyController : MonoBehaviour {
       RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, toPlayer, losDistance, ~Layers.CreateLayerMask(Layers.IGNORE_RAYCAST));
       if (hit != null && hit.collider.gameObject.tag == Tags.PLAYER) {
         audio.PlayOneShot(robotAlert, 0.7F);
-        gm.GameOver ();
+        //gm.GameOver ();
       }
     }
   }

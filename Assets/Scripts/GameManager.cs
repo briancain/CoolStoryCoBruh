@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour {
 
   public Text gameOverText;
 
+  public GameObject key;
+
   // Use this for initialization
   void Start () {
     enemies = GameObject.FindGameObjectsWithTag(Tags.ENEMY);

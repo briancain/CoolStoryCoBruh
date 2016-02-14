@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour {
 
   public AudioClip footsteps;
 
+  private bool hasKey = false;
+
   void Start() {
     rb = gameObject.GetComponent<Rigidbody2D> ();
     gm = GameObject.FindGameObjectWithTag (Tags.GAME_MANAGER).GetComponent<GameManager> ();
@@ -127,6 +129,14 @@ public class PlayerController : MonoBehaviour {
     }
 
     debug.text = "Snake State: " + (snakeState < 0 ? Mathf.Ceil (snakeState) : Mathf.Floor (snakeState));
+  }
+
+  void OnCollisionEnter2D(Collision2D coll) {
+    if (coll.gameObject.tag == Tags.KEY) {
+      Debug.Log("Player got key");
+      hasKey = true;
+      Destroy(coll.gameObject);
+    }
   }
 
 }
