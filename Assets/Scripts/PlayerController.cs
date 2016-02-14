@@ -19,12 +19,23 @@ public class PlayerController : MonoBehaviour {
   private float snakeStateMax = 100f;
   private float snakeStateMin = -100f;
 
+  private float footstepTimeout = 0.5f;
+  private float footstepTimer = 1.0f;
+
+  private bool moving;
+
+  private AudioSource aSource;
+
+  public AudioClip footsteps;
+
   void Start() {
     rb = gameObject.GetComponent<Rigidbody2D> ();
     gm = GameObject.FindGameObjectWithTag (Tags.GAME_MANAGER).GetComponent<GameManager> ();
+    aSource = gameObject.GetComponent<AudioSource> ();
 
     miniGameHappening = false;
     gameOver = false;
+    moving = false;
   }
 
   public bool startMiniGameMode(){
@@ -58,8 +69,18 @@ public class PlayerController : MonoBehaviour {
     } else {
       // make sure player isn't moving
       rb.velocity = new Vector2(0,0);
+      moving = false;
     }
     UpdateSnakeState ();
+    if (footstepTimer > 0) {
+      footstepTimer += Time.deltaTime;
+      if (footstepTimer >= footstepTimeout) {
+        footstepTimer = 0.0f;
+      }
+    } else if (moving) {
+      aSource.PlayOneShot (footsteps, 1.0f);
+      footstepTimer += Time.deltaTime;
+    }
   }
 
   void OnTriggerEnter2D(Collider2D other) {
@@ -78,6 +99,12 @@ public class PlayerController : MonoBehaviour {
     float yVel = playerSpeed * Input.GetAxisRaw ("Vertical");
 
     rb.velocity = new Vector2 (xVel, yVel);
+
+    if (rb.velocity != Vector2.zero) {
+      moving = true;
+    } else {
+      moving = false;
+    }
   }
 
   private void UpdateSnakeState() {
