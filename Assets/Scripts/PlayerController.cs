@@ -102,6 +102,13 @@ public class PlayerController : MonoBehaviour {
 
     if (rb.velocity != Vector2.zero) {
       moving = true;
+      if (xVel > 0) {
+        Vector3 scale = gameObject.transform.localScale;
+        gameObject.transform.localScale = new Vector3 (-0.25f, scale.y, scale.z);
+      } else if (xVel < 0) {
+        Vector3 scale = gameObject.transform.localScale;
+        gameObject.transform.localScale = new Vector3 (0.25f, scale.y, scale.z);
+      }
     } else {
       moving = false;
     }
