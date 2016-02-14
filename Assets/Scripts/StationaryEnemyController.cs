@@ -22,6 +22,7 @@ public class StationaryEnemyController : MonoBehaviour {
 
   private AudioSource audio;
   public AudioClip robotAlert;
+  public AudioClip hover;
 
   /////////////////////////////////
   /// Unity Methods
