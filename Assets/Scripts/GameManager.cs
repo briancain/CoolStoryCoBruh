@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
   public GameObject mgc;
   private AudioSource audio;
   public AudioClip gameTheme;
+  public AudioClip continueGameTheme;
   public AudioClip alertTheme;
 
   public Text gameOverText;
@@ -128,6 +129,6 @@ public class GameManager : MonoBehaviour {
     }
 
     audio.Stop();
-    audio.PlayOneShot(gameTheme, 1.0F);
+    audio.PlayOneShot(continueGameTheme, 1.0F);
   }
 }
