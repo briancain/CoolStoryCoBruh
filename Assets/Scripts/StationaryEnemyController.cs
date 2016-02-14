@@ -10,6 +10,8 @@ public class StationaryEnemyController : MonoBehaviour {
   private float losDistance = 15f;
   private float losAngle = 120f;
 
+  private GameManager gm;
+
   protected Animator anim;
 
   protected Vector2 facing;
@@ -24,6 +26,7 @@ public class StationaryEnemyController : MonoBehaviour {
     player = GameObject.FindGameObjectWithTag (Tags.PLAYER);
     facing = defaultFacing;
     anim = gameObject.GetComponent<Animator>();
+    gm = GameObject.FindGameObjectWithTag (Tags.GAME_MANAGER).GetComponent<GameManager> ();
   }
 
   protected virtual void Update () {
@@ -54,7 +57,7 @@ public class StationaryEnemyController : MonoBehaviour {
       // The player is within the guard's LOS, so make a raycast to ensure nothing is in the way
       RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, toPlayer, losDistance, ~Layers.CreateLayerMask(Layers.IGNORE_RAYCAST));
       if (hit != null && hit.collider.gameObject.tag == Tags.PLAYER) {
-        print ("ENEMY SAW PLAYER");
+        gm.GameOver ();
       }
     }
   }

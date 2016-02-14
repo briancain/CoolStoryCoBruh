@@ -74,12 +74,12 @@ public class GameManager : MonoBehaviour {
     }
   }
 
-  void GameOver() {
+  public void GameOver() {
     Debug.Log("Game Over");
     //SceneManager.LoadScene(Scenes.GAME_OVER);
   }
 
-  void WinGame() {
+  public void WinGame() {
     Debug.Log("You win!!");
   }
 

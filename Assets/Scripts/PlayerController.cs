@@ -56,6 +56,12 @@ public class PlayerController : MonoBehaviour {
     UpdateSnakeState ();
   }
 
+  void OnTriggerEnter2D(Collider2D other) {
+    if (other.gameObject.tag == Tags.ELEVATOR) {
+      gm.WinGame ();
+    }
+  }
+
   public void ScarfSwitched() {
     snakeChange *= -1;
   }
