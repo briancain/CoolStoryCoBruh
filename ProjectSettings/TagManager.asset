@@ -10,6 +10,7 @@ TagManager:
   - Elevator
   - Key
   - Door
+  - SnakeBar
   layers:
   - Default
   - TransparentFX
