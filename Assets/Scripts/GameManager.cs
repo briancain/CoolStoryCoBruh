@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -8,6 +9,10 @@ public class GameManager : MonoBehaviour {
   private GameObject[] enemies;
   private GameObject player;
   private bool miniGameOngoing;
+  private bool gameOver;
+
+  private float gameOverTime;
+  private float gameOverTimer;
 
   private MiniGameController miniGameController;
   public GameObject mgc;
@@ -28,6 +33,10 @@ public class GameManager : MonoBehaviour {
     audio = GetComponent<AudioSource>();
 
     audio.PlayOneShot(gameTheme, 1.0F);
+
+    gameOver = false;
+    gameOverTime = 2.0f;
+    gameOverTimer = 0.0f;
   }
   // Update is called once per frame
   void Update () {
@@ -40,6 +49,13 @@ public class GameManager : MonoBehaviour {
             || (playerSnakeChange < 0 && playerSnakeState < 0))) {
       miniGameOngoing = true;
       InitSnakeMiniGame();
+    }
+
+    if (gameOver) {
+      gameOverTimer += Time.deltaTime;
+      if (gameOverTimer >= gameOverTime) {
+        SceneManager.LoadScene (0);
+      }
     }
   }
 
@@ -80,8 +96,14 @@ public class GameManager : MonoBehaviour {
 
   public void GameOver() {
     Debug.Log("Game Over");
+    gameOver = true;
     gameOverText.enabled = true;
-    //SceneManager.LoadScene(Scenes.GAME_OVER);
+    player.GetComponent<PlayerController> ().GameOver ();
+    foreach (GameObject obj in enemies) {
+      if (obj != null) {
+        obj.GetComponent<StationaryEnemyController>().GameOver();
+      }
+    }
   }
 
   public void WinGame() {

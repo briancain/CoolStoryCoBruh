@@ -25,7 +25,7 @@ public class EnemyController : StationaryEnemyController {
 	}
 	
 	void Update () {
-    if (!alert) {
+    if (!alert && !gameOver) {
       Move ();
     }
     base.Update ();

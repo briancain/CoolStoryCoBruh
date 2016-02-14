@@ -18,6 +18,8 @@ public class StationaryEnemyController : MonoBehaviour {
 
   protected GameObject player;
 
+  protected bool gameOver;
+
   /////////////////////////////////
   /// Unity Methods
   /////////////////////////////////
@@ -27,14 +29,17 @@ public class StationaryEnemyController : MonoBehaviour {
     facing = defaultFacing;
     anim = gameObject.GetComponent<Animator>();
     gm = GameObject.FindGameObjectWithTag (Tags.GAME_MANAGER).GetComponent<GameManager> ();
+    gameOver = false;
   }
 
   protected virtual void Update () {
-    if (alert) {
-      facing = (player.transform.position - gameObject.transform.position).normalized;
+    if (!gameOver) {
+      if (alert) {
+        facing = (player.transform.position - gameObject.transform.position).normalized;
+      }
+      UpdateFacing ();
+      LineOfSight ();
     }
-    UpdateFacing ();
-    LineOfSight ();
   }
 
   // Send this enemy into an alert state
@@ -46,6 +51,10 @@ public class StationaryEnemyController : MonoBehaviour {
   public virtual void EndAlert() {
     facing = defaultFacing;
     alert = false;
+  }
+
+  public void GameOver() {
+    gameOver = true;
   }
 
   // Look for the player

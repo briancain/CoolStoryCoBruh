@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
   private GameManager gm;
 
   private bool miniGameHappening;
+  private bool gameOver;
 
   public float snakeState = 0;
   private float rateOfChange = 2f;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour {
     gm = GameObject.FindGameObjectWithTag (Tags.GAME_MANAGER).GetComponent<GameManager> ();
 
     miniGameHappening = false;
+    gameOver = false;
   }
 
   public bool startMiniGameMode(){
@@ -45,9 +47,13 @@ public class PlayerController : MonoBehaviour {
     }
   }
 
+  public void GameOver() {
+    gameOver = true;
+  }
+
   // Update is called once per frame
   void Update () {
-    if (!miniGameHappening) {
+    if (!miniGameHappening && !gameOver) {
       Move();
     } else {
       // make sure player isn't moving
