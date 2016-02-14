@@ -20,6 +20,9 @@ public class StationaryEnemyController : MonoBehaviour {
 
   protected bool gameOver;
 
+  private AudioSource audio;
+  public AudioClip robotAlert;
+
   /////////////////////////////////
   /// Unity Methods
   /////////////////////////////////
@@ -30,6 +33,8 @@ public class StationaryEnemyController : MonoBehaviour {
     anim = gameObject.GetComponent<Animator>();
     gm = GameObject.FindGameObjectWithTag (Tags.GAME_MANAGER).GetComponent<GameManager> ();
     gameOver = false;
+
+    audio = GetComponent<AudioSource>();
   }
 
   protected virtual void Update () {
@@ -44,6 +49,11 @@ public class StationaryEnemyController : MonoBehaviour {
 
   // Send this enemy into an alert state
   public void Alert() {
+    float playerDistance = Vector2.Distance(player.transform.position, gameObject.transform.position);
+    Debug.Log("Player Distance: " + playerDistance);
+    if (playerDistance <= 5.0f) {
+      audio.PlayOneShot(robotAlert, 0.7F);
+    }
     alert = true;
   }
 
@@ -66,6 +76,7 @@ public class StationaryEnemyController : MonoBehaviour {
       // The player is within the guard's LOS, so make a raycast to ensure nothing is in the way
       RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, toPlayer, losDistance, ~Layers.CreateLayerMask(Layers.IGNORE_RAYCAST));
       if (hit != null && hit.collider.gameObject.tag == Tags.PLAYER) {
+        audio.PlayOneShot(robotAlert, 0.7F);
         gm.GameOver ();
       }
     }
