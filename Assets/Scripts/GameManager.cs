@@ -37,17 +37,25 @@ public class GameManager : MonoBehaviour {
       Debug.Log("Game manager could not stop player movement");
     }
 
-    winGame = miniGameController.StartGame();
-    Debug.Log("Player Mini Game Result: " + winGame);
+    miniGameController.StartGame();
 
-    isSuccess = player.GetComponent<PlayerController>().endMiniGameMode();
+  }
+
+  public void EndSnakeMiniGame(bool win) {
+    bool isSuccess = player.GetComponent<PlayerController>().endMiniGameMode();
+    miniGameOngoing = false;
+
     if (isSuccess) {
       Debug.Log("Game manager started player movement");
     } else {
       Debug.Log("Game manager could not start player movement");
     }
 
-    miniGameOngoing = false;
+    if(win) {
+      Debug.Log("Player Won");
+    } else {
+      Debug.Log("Player Lost");
+    }
   }
 
   void GameOver() {
