@@ -4,9 +4,8 @@ using System.Collections;
 public class MiniGameController : MonoBehaviour {
 
   private Vector2 swipeDirection;
-  private int taps;
-  private int swipes;
-  private int totalTaps;
+  private int taps = 0;
+  private int swipes = 0;
   private int totalActions;
 
   private bool isOver;
@@ -22,8 +21,6 @@ public class MiniGameController : MonoBehaviour {
   public bool StartGame(int total) {
     coolDown = 3.0f;
     totalActions = total;
-    taps = 0;
-    swipes = 0;
     gm = GameObject.FindGameObjectWithTag(Tags.GAME_MANAGER).GetComponent<GameManager>();
     swipeGame = false;
     tapGame = false;
