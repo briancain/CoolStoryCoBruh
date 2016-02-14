@@ -42,7 +42,6 @@ public class MiniGameController : MonoBehaviour {
     if (tapGame || swipeGame) {
       if (coolDown >= 0) {
         coolDown -= Time.deltaTime;
-        //Debug.Log("Cooldown: " + coolDown);
       } else {
         tapGame = false;
         swipeGame = false;
@@ -51,7 +50,6 @@ public class MiniGameController : MonoBehaviour {
     }
 
     if (tapGame && Input.GetMouseButtonDown(0)) {
-      Debug.Log("click: " + taps);
       taps++;
       if (taps == totalActions) {
         tapGame = false;
@@ -59,11 +57,9 @@ public class MiniGameController : MonoBehaviour {
       }
     } else if (swipeGame && Input.GetMouseButtonDown(0)) {
       Vector2 delta = new Vector2(Input.GetAxis("Mouse X"),Input.GetAxis("Mouse Y"))*40f;
-      Debug.Log("delta : " + delta);
       if (delta.x != 0 || delta.y !=0) {
         swipes++;
       }
-      Debug.Log("swipe: " + swipes);
       if (swipes == totalActions) {
         swipeGame = false;
         gm.EndSnakeMiniGame(true);
