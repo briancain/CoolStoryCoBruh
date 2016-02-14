@@ -68,6 +68,9 @@ public class PlayerController : MonoBehaviour {
 
   public void GameOver() {
     gameOver = true;
+    anim.SetBool ("Tiptoe", false);
+    anim.SetBool ("Head Careful", false);
+    anim.SetBool ("Head Surprised", true);
   }
 
   // Update is called once per frame
@@ -99,6 +102,13 @@ public class PlayerController : MonoBehaviour {
 
   public void ScarfSwitched() {
     snakeChange *= -1;
+    if (snakeChange < 0) {
+      anim.SetBool ("Left Scarf", false);
+      anim.SetBool ("Right Scarf", true);
+    } else {
+      anim.SetBool ("Left Scarf", true);
+      anim.SetBool ("Right Scarf", false);
+    }
   }
 
   // Moves the player based on input
@@ -136,6 +146,17 @@ public class PlayerController : MonoBehaviour {
 
     if (snakeState == snakeStateMax || snakeState == snakeStateMin) {
       gm.AlertEnemies ();
+      anim.SetBool ("Head Careful", false);
+      anim.SetBool ("Head Angry", true);
+      if (snakeState > 0) {
+        anim.SetBool ("Right Angry", true);
+      } else {
+        anim.SetBool ("Left Angry", true);
+      }
+    } else {
+      anim.SetBool ("Head Angry", false);
+      anim.SetBool ("Left Angry", false);
+      anim.SetBool ("Right Angry", false);
     }
 
     debug.text = "Snake State: " + (snakeState < 0 ? Mathf.Ceil (snakeState) : Mathf.Floor (snakeState));

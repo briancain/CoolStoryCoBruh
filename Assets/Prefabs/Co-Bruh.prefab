@@ -274,7 +274,7 @@ GameObject:
   - 82: {fileID: 8230780}
   m_Layer: 0
   m_Name: Co-Bruh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
