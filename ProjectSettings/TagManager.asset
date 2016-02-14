@@ -9,6 +9,7 @@ TagManager:
   - GameManager
   - Elevator
   - Key
+  - Door
   layers:
   - Default
   - TransparentFX

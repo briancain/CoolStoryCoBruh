@@ -9,4 +9,5 @@ public class Tags : MonoBehaviour {
   public const string GAME_MANAGER = "GameManager";
   public const string ELEVATOR = "Elevator";
   public const string KEY = "Key";
+  public const string DOOR = "Door";
 }
