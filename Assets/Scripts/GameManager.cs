@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
 
   private MiniGameController miniGameController;
   public GameObject mgc;
+  private AudioSource audio;
+  public AudioClip gameTheme;
 
   // Use this for initialization
   void Start () {
@@ -18,6 +20,10 @@ public class GameManager : MonoBehaviour {
 
     miniGameController = mgc.GetComponent<MiniGameController>();
     miniGameOngoing = false;
+
+    audio = GetComponent<AudioSource>();
+
+    audio.PlayOneShot(gameTheme, 1.0F);
   }
   // Update is called once per frame
   void Update () {
