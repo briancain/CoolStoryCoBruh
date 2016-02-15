@@ -200,6 +200,7 @@ MonoBehaviour:
   gameOverText: {fileID: 861781678}
   leftSnakeRig: {fileID: 1318762487}
   rightSnakeRig: {fileID: 189542315}
+  alertHappening: 0
 --- !u!4 &141105236
 Transform:
   m_ObjectHideFlags: 0
@@ -1061,6 +1062,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11402806, guid: 7b6d9d02db3fb41e9bbc9a6025a2cf00, type: 2}
+      propertyPath: doorOpen
+      value: 
+      objectReference: {fileID: 8300000, guid: edc838ca515cf4dcc9829ac95de76820, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b6d9d02db3fb41e9bbc9a6025a2cf00, type: 2}
   m_IsPrefabParent: 0

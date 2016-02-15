@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour {
 
   public AudioClip footsteps;
   public AudioClip keyPickup;
+  public AudioClip doorOpen;
 
   private bool hasKey = false;
   private Animator anim;
@@ -212,6 +213,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     if (coll.gameObject.tag == Tags.DOOR && hasKey) {
+      aSource.PlayOneShot(doorOpen,1.0f);
       Destroy(coll.gameObject);
     }
   }
