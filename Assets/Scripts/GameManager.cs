@@ -26,7 +26,10 @@ public class GameManager : MonoBehaviour {
 
   public Text gameOverText;
 
-  public GameObject key;
+  private Animator leftAnim;
+  private Animator rightAnim;
+  public GameObject leftSnakeRig;
+  public GameObject rightSnakeRig;
 
   // Use this for initialization
   void Start () {
@@ -43,6 +46,9 @@ public class GameManager : MonoBehaviour {
     gameOver = false;
     gameOverTime = 8.0f;
     gameOverTimer = 0.0f;
+
+    leftAnim = leftSnakeRig.GetComponent<Animator>();
+    rightAnim = rightSnakeRig.GetComponent<Animator>();
   }
   // Update is called once per frame
   void Update () {
@@ -75,6 +81,15 @@ public class GameManager : MonoBehaviour {
       Debug.Log("Game manager could not stop player movement");
     }
 
+    leftAnim.SetBool("Slide In", true);
+    rightAnim.SetBool("Slide In", true);
+
+    if (player.GetComponent<PlayerController>().snakeChange > 0) {
+      rightAnim.SetBool("Skarf On", true);
+    } else {
+      leftAnim.SetBool("Skarf On", true);
+    }
+
     // Method takes number of actions to complete game
     float randGame = Random.Range(0,2);
     miniGameController.StartGame(3, randGame);
@@ -90,6 +105,12 @@ public class GameManager : MonoBehaviour {
     } else {
       Debug.Log("Game manager could not start player movement");
     }
+
+    leftAnim.SetBool("Slide In", false);
+    rightAnim.SetBool("Slide In", false);
+
+    leftAnim.SetBool("Slide Out", true);
+    rightAnim.SetBool("Slide Out", true);
 
     if(win) {
       Debug.Log("Player Won");
