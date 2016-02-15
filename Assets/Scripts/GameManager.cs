@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour {
   public GameObject leftSnakeRig;
   public GameObject rightSnakeRig;
 
+  public bool alertHappening = false;
+
   // Use this for initialization
   void Start () {
     enemies = GameObject.FindGameObjectsWithTag(Tags.ENEMY);
@@ -187,6 +189,7 @@ public class GameManager : MonoBehaviour {
   }
 
   public void AlertEnemies() {
+    alertHappening = true;
     foreach (GameObject obj in enemies) {
       if (obj != null) {
         obj.GetComponent<StationaryEnemyController>().Alert();
@@ -196,6 +199,7 @@ public class GameManager : MonoBehaviour {
   }
 
   void EndAlertEnemies() {
+    alertHappening = false;
     foreach (GameObject obj in enemies) {
       if (obj != null) {
         obj.GetComponent<StationaryEnemyController>().EndAlert();
