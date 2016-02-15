@@ -196,6 +196,10 @@ MonoBehaviour:
   continueGameTheme: {fileID: 8300000, guid: ddd885d3946ff44b2883c72119386bb8, type: 3}
   alertTheme: {fileID: 8300000, guid: d428c44b3c6d84cbdb1fcd53dd0928aa, type: 3}
   gameOverTheme: {fileID: 8300000, guid: 3a6e73e4880c84e709453747f20277f1, type: 3}
+  voiceWin:
+  - {fileID: 8300000, guid: c00d03e3fafea492dbf4bfbae7d95025, type: 3}
+  - {fileID: 8300000, guid: a92a9d076d66141c7b2fe66e35c526c1, type: 3}
+  - {fileID: 8300000, guid: 6f1953784996d4361accd704e0278789, type: 3}
   loseMiniGameTheme: {fileID: 8300000, guid: 716cab9aef1884d1f9058d4e9266329f, type: 3}
   gameOverText: {fileID: 861781678}
   leftSnakeRig: {fileID: 1318762487}

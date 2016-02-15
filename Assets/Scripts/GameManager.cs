@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour {
   public AudioClip alertTheme;
   public AudioClip gameOverTheme;
 
+  public AudioClip[] voiceWin;
+
   public AudioClip loseMiniGameTheme;
 
   public Text gameOverText;
@@ -150,6 +152,7 @@ public class GameManager : MonoBehaviour {
 
       player.GetComponent<PlayerController>().ScarfSwitched();
       audio.Stop();
+      audio.PlayOneShot(voiceWin[Random.Range(0,3)], 1.0F);
       EndAlertEnemies();
     } else {
       Debug.Log("Player Lost");
