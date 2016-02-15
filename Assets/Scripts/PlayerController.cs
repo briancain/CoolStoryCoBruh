@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour {
   private float snakeStateMax = 100f;
   private float snakeStateMin = -100f;
 
-  private float footstepTimeout = 0.5f;
-  private float footstepTimer = 1.0f;
+  private float footstepTimeout = 0.75f;
+  private float footstepTimer = 1.5f;
 
   private bool moving;
 
