@@ -105,7 +105,7 @@ public class StationaryEnemyController : MonoBehaviour {
   }
 
   // Update the facing of the sprite animation
-  private void UpdateFacing() {
+  protected void UpdateFacing() {
     anim = gameObject.GetComponent<Animator>();
     float angle = Vector2.Angle (facing, Vector2.right);
     int animFacing;

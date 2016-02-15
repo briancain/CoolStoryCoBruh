@@ -37,7 +37,7 @@ public class EnemyController : StationaryEnemyController {
   /////////////////////////////////
 
   // End this enemy's alert status
-  public void EndAlert() {
+  public override void EndAlert() {
     facing = (waypoints[currWaypoint].transform.position - gameObject.transform.position).normalized;
     alert = false;
   }
