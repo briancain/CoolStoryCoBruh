@@ -75,6 +75,14 @@ public class GameManager : MonoBehaviour {
     bool isSuccess = player.GetComponent<PlayerController>().startMiniGameMode();
     bool winGame = false;
 
+    if (player.GetComponent<PlayerController>().snakeChange > 0) {
+      rightAnim.SetBool("Skarf On", true);
+      leftAnim.SetBool("Skarf On", false);
+    } else {
+      rightAnim.SetBool("Skarf On", false);
+      leftAnim.SetBool("Skarf On", true);
+    }
+
     // reset bools
     leftAnim.SetBool("Game Angry", false);
     rightAnim.SetBool("Game Angry", false);
@@ -103,13 +111,6 @@ public class GameManager : MonoBehaviour {
     leftAnim.SetBool("Slide In", true);
     rightAnim.SetBool("Slide In", true);
 
-    if (player.GetComponent<PlayerController>().snakeChange > 0) {
-      rightAnim.SetBool("Skarf On", true);
-      leftAnim.SetBool("Skarf On", false);
-    } else {
-      rightAnim.SetBool("Skarf On", false);
-      leftAnim.SetBool("Skarf On", true);
-    }
 
     // Method takes number of actions to complete game
     float randGame = Random.Range(0,2);
