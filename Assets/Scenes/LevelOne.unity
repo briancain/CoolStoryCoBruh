@@ -226,7 +226,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   Priority: 128
   DopplerLevel: 1
@@ -314,7 +314,7 @@ Transform:
   - {fileID: 1207445277}
   - {fileID: 169383259}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1001 &169383258
 Prefab:
   m_ObjectHideFlags: 0

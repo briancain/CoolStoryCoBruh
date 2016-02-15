@@ -49,22 +49,30 @@ public class MiniGameController : MonoBehaviour {
       }
     }
 
-    if (tapGame && Input.GetMouseButtonDown(0)) {
-      taps++;
-      Debug.Log("Taps! : " + taps);
-      if (taps == totalActions) {
-        tapGame = false;
-        gm.EndSnakeMiniGame(true);
-      }
-    } else if (swipeGame && Input.GetMouseButtonDown(0)) {
-      Vector2 delta = new Vector2(Input.GetAxis("Mouse X"),Input.GetAxis("Mouse Y"))*40f;
-      Debug.Log("Swipe Delta: " + delta);
-      if (delta.x != 0 || delta.y !=0) {
-        swipes++;
-      }
-      if (swipes == totalActions) {
-        swipeGame = false;
-        gm.EndSnakeMiniGame(true);
+
+    if (Input.GetMouseButtonDown(0)) {
+      Debug.Log("Tap Game: " + tapGame);
+      Debug.Log("Swipe Game: " + swipeGame);
+
+      if (tapGame) {
+        taps++;
+        Debug.Log("Taps! : " + taps);
+        if (taps == totalActions) {
+          taps = 0;
+          tapGame = false;
+          gm.EndSnakeMiniGame(true);
+        }
+      } else if (swipeGame) {
+        Vector2 delta = new Vector2(Input.GetAxis("Mouse X"),Input.GetAxis("Mouse Y"))*40f;
+        Debug.Log("Swipe Delta: " + delta);
+        if (delta.x != 0 || delta.y !=0) {
+          swipes++;
+        }
+        if (swipes == totalActions) {
+          swipes = 0;
+          swipeGame = false;
+          gm.EndSnakeMiniGame(true);
+        }
       }
     }
   }
