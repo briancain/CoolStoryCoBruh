@@ -51,6 +51,7 @@ public class MiniGameController : MonoBehaviour {
 
     if (tapGame && Input.GetMouseButtonDown(0)) {
       taps++;
+      Debug.Log("Taps! : " + taps);
       if (taps == totalActions) {
         tapGame = false;
         gm.EndSnakeMiniGame(true);

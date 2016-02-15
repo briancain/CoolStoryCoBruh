@@ -75,23 +75,55 @@ public class GameManager : MonoBehaviour {
     bool isSuccess = player.GetComponent<PlayerController>().startMiniGameMode();
     bool winGame = false;
 
+    // reset bools
+    leftAnim.SetBool("Game Angry", false);
+    rightAnim.SetBool("Game Angry", false);
+
+    leftAnim.SetBool("Game Happy", false);
+    rightAnim.SetBool("Game Happy", false);
+
+    rightAnim.SetBool("Click Gesture", false);
+    leftAnim.SetBool("Click Gesture", false);
+
+    rightAnim.SetBool("Right Gesture", false);
+    leftAnim.SetBool("Right Gesture", false);
+
+    rightAnim.SetBool("Left Gesture", false);
+    leftAnim.SetBool("Left Gesture", false);
+
     if (isSuccess) {
       Debug.Log("Game manager stopped player movement");
     } else {
       Debug.Log("Game manager could not stop player movement");
     }
 
+    leftAnim.SetBool("Slide Out", false);
+    rightAnim.SetBool("Slide Out", false);
+
     leftAnim.SetBool("Slide In", true);
     rightAnim.SetBool("Slide In", true);
 
     if (player.GetComponent<PlayerController>().snakeChange > 0) {
       rightAnim.SetBool("Skarf On", true);
+      leftAnim.SetBool("Skarf On", false);
     } else {
+      rightAnim.SetBool("Skarf On", false);
       leftAnim.SetBool("Skarf On", true);
     }
 
     // Method takes number of actions to complete game
     float randGame = Random.Range(0,2);
+
+    if (randGame == 0f) {
+      //swipe
+      rightAnim.SetBool("Left Gesture", true);
+      leftAnim.SetBool("Left Gesture", true);
+    } else {
+      // tap
+      rightAnim.SetBool("Click Gesture", true);
+      leftAnim.SetBool("Click Gesture", true);
+    }
+
     miniGameController.StartGame(3, randGame);
 
   }
@@ -106,23 +138,32 @@ public class GameManager : MonoBehaviour {
       Debug.Log("Game manager could not start player movement");
     }
 
-    leftAnim.SetBool("Slide In", false);
-    rightAnim.SetBool("Slide In", false);
-
-    leftAnim.SetBool("Slide Out", true);
-    rightAnim.SetBool("Slide Out", true);
 
     if(win) {
       Debug.Log("Player Won");
+
+      leftAnim.SetBool("Game Happy", true);
+      rightAnim.SetBool("Game Happy", true);
+
       player.GetComponent<PlayerController>().ScarfSwitched();
       audio.Stop();
       EndAlertEnemies();
     } else {
       Debug.Log("Player Lost");
+
+      leftAnim.SetBool("Game Angry", true);
+      rightAnim.SetBool("Game Angry", true);
+
       audio.Stop();
       audio.PlayOneShot(loseMiniGameTheme, 0.7F);
       AlertEnemies();
     }
+
+    leftAnim.SetBool("Slide In", false);
+    rightAnim.SetBool("Slide In", false);
+
+    leftAnim.SetBool("Slide Out", true);
+    rightAnim.SetBool("Slide Out", true);
   }
 
   public void GameOver() {
