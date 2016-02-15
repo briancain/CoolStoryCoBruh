@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour {
     float playerSnakeChange = player.GetComponent<PlayerController>().snakeChange;
     float absPlSnakeState = Mathf.Abs(playerSnakeState);
     if (Input.GetKey(KeyCode.Space) && !miniGameOngoing
-        && (absPlSnakeState >= 10 && absPlSnakeState <= 100)
+        && (absPlSnakeState >= 70 && absPlSnakeState <= 100)
         && ((playerSnakeChange > 0 && playerSnakeState > 0)
             || (playerSnakeChange < 0 && playerSnakeState < 0))) {
       miniGameOngoing = true;
