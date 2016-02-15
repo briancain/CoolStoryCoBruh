@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
   private bool gameOver;
 
   public float snakeState = 0;
-  private float rateOfChange = 8f;
+  private float rateOfChange = 6f;
   public int snakeChange = 1;
   private float snakeStateMax = 100f;
   private float snakeStateMin = -100f;
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour {
 
   public AudioClip footsteps;
   public AudioClip keyPickup;
+  public AudioClip doorOpen;
 
   private bool hasKey = false;
   private Animator anim;
@@ -183,7 +184,10 @@ public class PlayerController : MonoBehaviour {
 
 
     if (snakeState == snakeStateMax || snakeState == snakeStateMin) {
-      gm.AlertEnemies ();
+      if (!gm.alertHappening) {
+        gm.AlertEnemies ();
+      }
+
       anim.SetBool ("Head Careful", false);
       anim.SetBool ("Head Angry", true);
       if (snakeState > 0) {
@@ -209,6 +213,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     if (coll.gameObject.tag == Tags.DOOR && hasKey) {
+      aSource.PlayOneShot(doorOpen,1.0f);
       Destroy(coll.gameObject);
     }
   }
