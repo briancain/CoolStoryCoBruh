@@ -7,7 +7,7 @@ public class StationaryEnemyController : MonoBehaviour {
 
   public enum Facing { RIGHT, BACK_RIGHT, BACK, BACK_LEFT, LEFT, FRONT_LEFT, FRONT, FRONT_RIGHT }
 
-  private float losDistance = 5f;
+  private float losDistance = 4f;
   private float losAngle = 90f;
 
   private GameManager gm;
@@ -25,6 +25,8 @@ public class StationaryEnemyController : MonoBehaviour {
   public AudioClip hover;
   private float hoverTimeout = 0.5f;
   private float hoverCooldown = 1f;
+
+  public GameObject losArc;
 
   /////////////////////////////////
   /// Unity Methods
@@ -135,5 +137,9 @@ public class StationaryEnemyController : MonoBehaviour {
       anim.SetInteger ("Facing", animFacing);
       anim.SetTrigger ("Move");
     }
+
+    // Update the LOS cone
+    float rotation = Vector2.Angle(new Vector2(-1, 1), facing) * Mathf.Sign(Vector3.Dot(new Vector3(0f, 0f, 1f), Vector3.Cross(new Vector3(-1, 1, 0), (Vector3)facing)));  
+    losArc.transform.eulerAngles = new Vector3(0.0f, 0.0f, rotation);
   }
 }
