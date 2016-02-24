@@ -71,7 +71,7 @@ public class StationaryEnemyController : MonoBehaviour {
   }
 
   // Send this enemy into an alert state
-  public void Alert() {
+  public virtual void Alert() {
     float playerDistance = Vector2.Distance(player.transform.position, gameObject.transform.position);
     if (playerDistance <= 5.0f) {
       audio.PlayOneShot(robotAlert, 0.7F);
