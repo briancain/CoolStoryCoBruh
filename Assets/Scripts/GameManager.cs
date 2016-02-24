@@ -174,7 +174,6 @@ public class GameManager : MonoBehaviour {
 
   public void GameOver() {
     Debug.Log("Game Over");
-    SceneManager.LoadScene (2);
     gameOver = true;
     gameOverText.enabled = true;
     player.GetComponent<PlayerController> ().GameOver ();
@@ -185,7 +184,7 @@ public class GameManager : MonoBehaviour {
     }
 
     audio.Stop();
-    audio.PlayOneShot(gameOverTheme, 1.0F);
+    SceneManager.LoadScene (2);
   }
 
   public void WinGame() {
