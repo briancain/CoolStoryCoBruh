@@ -17,7 +17,6 @@ public class EnemyController : StationaryEnemyController {
   private Seeker seeker;
   private Path path;
   //The max distance from the AI to a waypoint for it to continue to the next waypoint
-  public float nextWaypointDistance = 1f;
   private int currentPathWaypoint = 0;
 
   private float stopTimer = 0f;
