@@ -73,7 +73,7 @@ public class EnemyController : StationaryEnemyController {
   public override void Alert() {
     base.Alert ();
     patrolling = false;
-    calculatingPath = true;
+    //calculatingPath = true;
     //lastPatrolPosition = gameObject.transform;
     //seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
   }
@@ -120,8 +120,7 @@ public class EnemyController : StationaryEnemyController {
         facing = wp.directionToLook;
         anim.speed = 1;
       }
-<<<<<<< HEAD
-    } 
+    }
 //    else if (path != null) {
 //      if (currentPathWaypoint >= path.vectorPath.Count)
 //      {
