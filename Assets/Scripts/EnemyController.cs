@@ -77,6 +77,7 @@ public class EnemyController : StationaryEnemyController {
     base.Alert ();
     patrolling = false;
     calculatingPath = true;
+    moving = false;
     seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
   }
 
@@ -128,14 +129,7 @@ public class EnemyController : StationaryEnemyController {
         if (!alert) {
           patrolling = true;
           Debug.Log ("PATROLLING");
-          if (currWaypoint == 0 || currWaypoint == waypoints.Length - 1) {
-            forwardPath = !forwardPath;
-          }
-          if (forwardPath) {
-            currWaypoint++;
-          } else {
-            currWaypoint--;
-          }
+          stopTimer = 10f;
         }
         path = null;
         return;
