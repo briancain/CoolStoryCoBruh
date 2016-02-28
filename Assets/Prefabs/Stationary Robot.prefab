@@ -499,6 +499,7 @@ GameObject:
   - 95: {fileID: 9571400}
   - 114: {fileID: 11403766}
   - 82: {fileID: 8208268}
+  - 114: {fileID: 11427084}
   m_Layer: 2
   m_Name: Stationary Robot
   m_TagString: Enemy
@@ -1381,9 +1382,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alert: 0
   defaultFacing: {x: -1, y: -1}
+  enemySpeed: 0
   robotAlert: {fileID: 8300000, guid: aeb12e24ba4994569a2968f6948419c7, type: 3}
   hover: {fileID: 0}
   losArc: {fileID: 165290}
+  nextWaypointDistance: 1
+--- !u!114 &11427084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  traversableTagsCompatibility:
+    tagsChange: -1
+    tagsSet: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!212 &21206690
 SpriteRenderer:
   m_ObjectHideFlags: 1

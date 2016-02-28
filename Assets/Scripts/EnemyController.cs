@@ -5,7 +5,6 @@ using Pathfinding;
 
 public class EnemyController : StationaryEnemyController {
 
-  public float enemySpeed;
   public GameObject[] waypoints;
 
   private Rigidbody2D rb;
@@ -24,6 +23,8 @@ public class EnemyController : StationaryEnemyController {
   private int currentPathWaypoint = 0;
 
   private float stopTimer = 0f;
+
+  private Transform lastPatrolPosition;
 
   /////////////////////////////////
   /// Unity Methods
@@ -66,19 +67,19 @@ public class EnemyController : StationaryEnemyController {
 
   // End this enemy's alert status
   public override void EndAlert() {
-    facing = (waypoints[currWaypoint].transform.position - gameObject.transform.position).normalized;
+    facing = (lastPatrolPosition.position - gameObject.transform.position).normalized;
     alert = false;
-    calculatingPath = true;
-    seeker.ReleaseClaimedPath ();
-    seeker.StartPath (transform.position, waypoints [currWaypoint].transform.position, OnPathComplete);
+    //calculatingPath = true;
+    //seeker.ReleaseClaimedPath ();
+    //seeker.StartPath (transform.position, lastPatrolPosition.position, OnPathComplete);
   }
 
   public override void Alert() {
     base.Alert ();
     patrolling = false;
     calculatingPath = true;
-    moving = false;
-    seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
+    //lastPatrolPosition = gameObject.transform;
+    //seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
   }
 
   /////////////////////////////////
@@ -86,8 +87,8 @@ public class EnemyController : StationaryEnemyController {
   /////////////////////////////////
 
   // Move the enemy along their patrol path
-  private void Move() {
-    if (!alert && patrolling) {
+  public override void Move() {
+    if (!alert) {
       GameObject dest = waypoints [currWaypoint];
       Waypoint wp = dest.GetComponent<Waypoint> ();
 
@@ -123,39 +124,39 @@ public class EnemyController : StationaryEnemyController {
         facing = wp.directionToLook;
         anim.speed = 1;
       }
-    } else if (path != null) {
-      if (currentPathWaypoint >= path.vectorPath.Count)
-      {
-        if (!alert) {
-          patrolling = true;
-          Debug.Log ("PATROLLING");
-          stopTimer = 10f;
-        }
-        path = null;
-        return;
-      }
-
-      //Direction to the next waypoint
-      Vector3 dir = ( path.vectorPath[currentPathWaypoint] - transform.position ).normalized;
-      facing = dir;
-      dir *= enemySpeed * Time.deltaTime;
-      this.gameObject.transform.Translate(dir);
-
-      //Check if we are close enough to the next waypoint
-      //If we are, proceed to follow the next waypoint
-      if (Vector3.Distance( transform.position, path.vectorPath[ currentPathWaypoint ] ) < nextWaypointDistance)
-      {
-        currentPathWaypoint++;
-        return;
-      }
-
-      if (alert) {
-        if (calculatingPath) {
-          target = player.transform;
-        } else {
-          seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
-        }
-      }
-    }
+    } 
+//    else if (path != null) {
+//      if (currentPathWaypoint >= path.vectorPath.Count)
+//      {
+//        if (!alert) {
+//          patrolling = true;
+//          Debug.Log ("PATROLLING");
+//        }
+//        path = null;
+//        return;
+//      }
+//
+//      //Direction to the next waypoint
+//      Vector3 dir = ( path.vectorPath[currentPathWaypoint] - transform.position ).normalized;
+//      facing = dir;
+//      dir *= enemySpeed * Time.deltaTime;
+//      this.gameObject.transform.Translate(dir);
+//
+//      //Check if we are close enough to the next waypoint
+//      //If we are, proceed to follow the next waypoint
+//      if (Vector3.Distance( transform.position, path.vectorPath[ currentPathWaypoint ] ) < nextWaypointDistance)
+//      {
+//        currentPathWaypoint++;
+//        return;
+//      }
+//
+//      if (alert) {
+//        if (calculatingPath) {
+//          target = player.transform;
+//        } else {
+//          seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
+//        }
+//      }
+//    }
   }
 }

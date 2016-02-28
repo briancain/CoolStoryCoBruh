@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Pathfinding;
 
 public class StationaryEnemyController : MonoBehaviour {
   public bool alert = false;
@@ -9,6 +10,7 @@ public class StationaryEnemyController : MonoBehaviour {
 
   private float losDistance = 5f;
   private float losAngle = 90f;
+  public float enemySpeed;
 
   private GameManager gm;
 
@@ -25,8 +27,17 @@ public class StationaryEnemyController : MonoBehaviour {
   public AudioClip hover;
   private float hoverTimeout = 0.5f;
   private float hoverCooldown = 1f;
+  private Seeker seeker;
+
+  private Path path;
 
   public GameObject losArc;
+
+  private int currentPathWaypoint = 0;
+  //The max distance from the AI to a waypoint for it to continue to the next waypoint
+  public float nextWaypointDistance = 1f;
+
+  private Transform startPosition;
 
   /////////////////////////////////
   /// Unity Methods
@@ -40,6 +51,8 @@ public class StationaryEnemyController : MonoBehaviour {
     gameOver = false;
 
     audio = GetComponent<AudioSource>();
+    seeker = gameObject.GetComponent<Seeker> ();
+    startPosition = gameObject.transform;
   }
 
   protected virtual void Update () {
@@ -47,6 +60,7 @@ public class StationaryEnemyController : MonoBehaviour {
       if (alert) {
         facing = (player.transform.position - gameObject.transform.position).normalized;
       }
+      Move ();
       UpdateFacing ();
       LineOfSight ();
 
@@ -59,6 +73,45 @@ public class StationaryEnemyController : MonoBehaviour {
         PlayHover();
         hoverCooldown += Time.deltaTime;
       }
+    }
+  }
+
+  public virtual void Move() {
+    if (alert) {
+      if (seeker.IsDone ()) {
+        seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
+      }
+    }
+    if (path != null) {
+      if (currentPathWaypoint >= path.vectorPath.Count)
+      {
+        path = null;
+        if (!alert) {
+          facing = defaultFacing;
+        }
+        return;
+      }
+
+      //Direction to the next waypoint
+      Vector3 dir = ( path.vectorPath[currentPathWaypoint] - transform.position ).normalized;
+      facing = dir;
+      dir *= enemySpeed * Time.deltaTime;
+      this.gameObject.transform.Translate(dir);
+
+      //Check if we are close enough to the next waypoint
+      //If we are, proceed to follow the next waypoint
+      if (Vector3.Distance( transform.position, path.vectorPath[ currentPathWaypoint ] ) < nextWaypointDistance)
+      {
+        currentPathWaypoint++;
+        return;
+      }
+    }
+  }
+
+  void OnPathComplete(Path p) {
+    if (!p.error) {
+      path = p;
+      currentPathWaypoint = 0;
     }
   }
 
@@ -81,7 +134,8 @@ public class StationaryEnemyController : MonoBehaviour {
 
   // End this enemy's alert status
   public virtual void EndAlert() {
-    facing = defaultFacing;
+    seeker.StartPath (transform.position, startPosition.position, OnPathComplete);
+    //facing = defaultFacing;
     alert = false;
   }
 
