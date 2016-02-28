@@ -14,8 +14,6 @@ public class EnemyController : StationaryEnemyController {
   public bool moving = true;
   public bool patrolling = true;
 
-  private bool calculatingPath = false;
-
   private Transform target;
   private Seeker seeker;
   private Path path;
@@ -46,8 +44,6 @@ public class EnemyController : StationaryEnemyController {
       if (target != null) {
         seeker.StartPath (transform.position, target.position, OnPathComplete);
         target = null;
-      } else {
-        calculatingPath = false;
       }
     }
   }
@@ -68,7 +64,6 @@ public class EnemyController : StationaryEnemyController {
   public override void EndAlert() {
     facing = (waypoints[currWaypoint].transform.position - gameObject.transform.position).normalized;
     alert = false;
-    calculatingPath = true;
     seeker.ReleaseClaimedPath ();
     seeker.StartPath (transform.position, waypoints [currWaypoint].transform.position, OnPathComplete);
   }
@@ -76,7 +71,6 @@ public class EnemyController : StationaryEnemyController {
   public override void Alert() {
     base.Alert ();
     patrolling = false;
-    calculatingPath = true;
     moving = false;
     seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
   }
@@ -150,7 +144,7 @@ public class EnemyController : StationaryEnemyController {
       }
 
       if (alert) {
-        if (calculatingPath) {
+        if (!seeker.IsDone()) {
           target = player.transform;
         } else {
           seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
