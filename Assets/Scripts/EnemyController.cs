@@ -13,8 +13,6 @@ public class EnemyController : StationaryEnemyController {
   public bool moving = true;
   public bool patrolling = true;
 
-  private bool calculatingPath = false;
-
   private Transform target;
   private Seeker seeker;
   private Path path;
@@ -47,8 +45,6 @@ public class EnemyController : StationaryEnemyController {
       if (target != null) {
         seeker.StartPath (transform.position, target.position, OnPathComplete);
         target = null;
-      } else {
-        calculatingPath = false;
       }
     }
   }
@@ -124,6 +120,7 @@ public class EnemyController : StationaryEnemyController {
         facing = wp.directionToLook;
         anim.speed = 1;
       }
+<<<<<<< HEAD
     } 
 //    else if (path != null) {
 //      if (currentPathWaypoint >= path.vectorPath.Count)
