@@ -9,10 +9,12 @@ public class EnemyController : StationaryEnemyController {
   public GameObject[] waypoints;
 
   private Rigidbody2D rb;
-  private int currWaypoint = 1;
+  public int currWaypoint = 1;
   private bool forwardPath = true;
-  private bool moving = true;
-  private bool patrolling = true;
+  public bool moving = true;
+  public bool patrolling = true;
+
+  private bool calculatingPath = false;
 
   private Transform target;
   private Seeker seeker;
@@ -41,6 +43,12 @@ public class EnemyController : StationaryEnemyController {
     if (!p.error) {
       path = p;
       currentPathWaypoint = 0;
+      if (target != null) {
+        seeker.StartPath (transform.position, target.position, OnPathComplete);
+        target = null;
+      } else {
+        calculatingPath = false;
+      }
     }
   }
 	
@@ -60,6 +68,7 @@ public class EnemyController : StationaryEnemyController {
   public override void EndAlert() {
     facing = (waypoints[currWaypoint].transform.position - gameObject.transform.position).normalized;
     alert = false;
+    calculatingPath = true;
     seeker.ReleaseClaimedPath ();
     seeker.StartPath (transform.position, waypoints [currWaypoint].transform.position, OnPathComplete);
   }
@@ -67,7 +76,7 @@ public class EnemyController : StationaryEnemyController {
   public override void Alert() {
     base.Alert ();
     patrolling = false;
-    seeker.ReleaseClaimedPath ();
+    calculatingPath = true;
     seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
   }
 
@@ -116,7 +125,18 @@ public class EnemyController : StationaryEnemyController {
     } else if (path != null) {
       if (currentPathWaypoint >= path.vectorPath.Count)
       {
-        patrolling = true;
+        if (!alert) {
+          patrolling = true;
+          Debug.Log ("PATROLLING");
+          if (currWaypoint == 0 || currWaypoint == waypoints.Length - 1) {
+            forwardPath = !forwardPath;
+          }
+          if (forwardPath) {
+            currWaypoint++;
+          } else {
+            currWaypoint--;
+          }
+        }
         path = null;
         return;
       }
@@ -136,8 +156,11 @@ public class EnemyController : StationaryEnemyController {
       }
 
       if (alert) {
-        seeker.ReleaseClaimedPath ();
-        seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
+        if (calculatingPath) {
+          target = player.transform;
+        } else {
+          seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
+        }
       }
     }
   }
