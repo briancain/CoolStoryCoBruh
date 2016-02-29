@@ -62,7 +62,7 @@ public class EnemyController : StationaryEnemyController {
 
   // End this enemy's alert status
   public override void EndAlert() {
-    facing = (lastPatrolPosition.position - gameObject.transform.position).normalized;
+    facing = (waypoints[currWaypoint].transform.position - gameObject.transform.position).normalized;
     alert = false;
     //calculatingPath = true;
     //seeker.ReleaseClaimedPath ();
