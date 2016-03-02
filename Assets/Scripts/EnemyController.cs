@@ -11,17 +11,8 @@ public class EnemyController : StationaryEnemyController {
   public int currWaypoint = 1;
   private bool forwardPath = true;
   public bool moving = true;
-  public bool patrolling = true;
-
-  private Transform target;
-  private Seeker seeker;
-  private Path path;
-  //The max distance from the AI to a waypoint for it to continue to the next waypoint
-  private int currentPathWaypoint = 0;
 
   private float stopTimer = 0f;
-
-  private Transform lastPatrolPosition;
 
   /////////////////////////////////
   /// Unity Methods
@@ -32,26 +23,9 @@ public class EnemyController : StationaryEnemyController {
     rb = gameObject.GetComponent<Rigidbody2D> ();
     facing = (waypoints [currWaypoint].transform.position - gameObject.transform.position).normalized;
     anim.speed = 5;
-
-    seeker = gameObject.GetComponent<Seeker> ();
-    //seeker.StartPath (transform.position, waypoints [currWaypoint].transform.position, OnPathComplete);
 	}
-
-  void OnPathComplete(Path p) {
-    if (!p.error) {
-      path = p;
-      currentPathWaypoint = 0;
-      if (target != null) {
-        seeker.StartPath (transform.position, target.position, OnPathComplete);
-        target = null;
-      }
-    }
-  }
 	
 	void Update () {
-    if (!gameOver) {
-      Move ();
-    }
     base.Update ();
   }
 
@@ -71,10 +45,6 @@ public class EnemyController : StationaryEnemyController {
 
   public override void Alert() {
     base.Alert ();
-    patrolling = false;
-    //calculatingPath = true;
-    //lastPatrolPosition = gameObject.transform;
-    //seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
   }
 
   /////////////////////////////////
@@ -83,7 +53,7 @@ public class EnemyController : StationaryEnemyController {
 
   // Move the enemy along their patrol path
   public override void Move() {
-    if (!alert) {
+    if (true) {
       GameObject dest = waypoints [currWaypoint];
       Waypoint wp = dest.GetComponent<Waypoint> ();
 
@@ -120,38 +90,5 @@ public class EnemyController : StationaryEnemyController {
         anim.speed = 1;
       }
     }
-//    else if (path != null) {
-//      if (currentPathWaypoint >= path.vectorPath.Count)
-//      {
-//        if (!alert) {
-//          patrolling = true;
-//          Debug.Log ("PATROLLING");
-//        }
-//        path = null;
-//        return;
-//      }
-//
-//      //Direction to the next waypoint
-//      Vector3 dir = ( path.vectorPath[currentPathWaypoint] - transform.position ).normalized;
-//      facing = dir;
-//      dir *= enemySpeed * Time.deltaTime;
-//      this.gameObject.transform.Translate(dir);
-//
-//      //Check if we are close enough to the next waypoint
-//      //If we are, proceed to follow the next waypoint
-//      if (Vector3.Distance( transform.position, path.vectorPath[ currentPathWaypoint ] ) < nextWaypointDistance)
-//      {
-//        currentPathWaypoint++;
-//        return;
-//      }
-//
-//      if (alert) {
-//        if (calculatingPath) {
-//          target = player.transform;
-//        } else {
-//          seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
-//        }
-//      }
-//    }
   }
 }
