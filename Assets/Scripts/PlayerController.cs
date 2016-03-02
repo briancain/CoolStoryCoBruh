@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour {
   public GameObject tongueLeft;
   public GameObject tongueRight;
 
+  private Animator elevatorAnimator;
+  public GameObject elevatorRig;
+
   void Start() {
     rb = gameObject.GetComponent<Rigidbody2D> ();
     gm = GameObject.FindGameObjectWithTag (Tags.GAME_MANAGER).GetComponent<GameManager> ();
@@ -51,6 +54,8 @@ public class PlayerController : MonoBehaviour {
 
     tongueLeft.transform.localScale = new Vector3(0f,1f,1f);
     tongueRight.transform.localScale = new Vector3(0f,1f,1f);
+
+    elevatorAnimator = elevatorRig.GetComponent<Animator>();
   }
 
   public bool startMiniGameMode(){
@@ -102,12 +107,6 @@ public class PlayerController : MonoBehaviour {
     } else if (moving) {
       aSource.PlayOneShot (footsteps, 1.0f);
       footstepTimer += Time.deltaTime;
-    }
-  }
-
-  void OnTriggerEnter2D(Collider2D other) {
-    if (other.gameObject.tag == Tags.ELEVATOR) {
-      gm.WinGame ();
     }
   }
 
@@ -202,6 +201,11 @@ public class PlayerController : MonoBehaviour {
   }
 
   void OnCollisionEnter2D(Collision2D coll) {
+    if (coll.gameObject.tag == Tags.ELEVATOR) {
+      elevatorAnimator.SetBool("Close", true);
+      gm.WinGame ();
+    }
+
     if (coll.gameObject.tag == Tags.KEY) {
       aSource.PlayOneShot(keyPickup,1.0f);
       Debug.Log("Player got key");

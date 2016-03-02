@@ -130,7 +130,6 @@ public class GameManager : MonoBehaviour {
     }
 
     miniGameController.StartGame(3, randGame);
-
   }
 
   public void EndSnakeMiniGame(bool win) {
