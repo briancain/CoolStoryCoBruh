@@ -1382,7 +1382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alert: 0
   defaultFacing: {x: -1, y: -1}
-  enemySpeed: 0
+  enemySpeed: 3
   robotAlert: {fileID: 8300000, guid: aeb12e24ba4994569a2968f6948419c7, type: 3}
   hover: {fileID: 0}
   losArc: {fileID: 165290}
