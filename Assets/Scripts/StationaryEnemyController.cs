@@ -29,6 +29,8 @@ public class StationaryEnemyController : MonoBehaviour {
   private float hoverCooldown = 1f;
   private Seeker seeker;
 
+  private float pathTimeout = 1f;
+  private float pathCooldown = 2f;
   private Path path;
 
   public GameObject losArc;
@@ -37,7 +39,7 @@ public class StationaryEnemyController : MonoBehaviour {
   //The max distance from the AI to a waypoint for it to continue to the next waypoint
   public float nextWaypointDistance = 1f;
 
-  private Transform startPosition;
+  private Vector3 startPosition;
 
   /////////////////////////////////
   /// Unity Methods
@@ -52,7 +54,7 @@ public class StationaryEnemyController : MonoBehaviour {
 
     audio = GetComponent<AudioSource>();
     seeker = gameObject.GetComponent<Seeker> ();
-    startPosition = gameObject.transform;
+    startPosition = gameObject.transform.position;
   }
 
   protected virtual void Update () {
@@ -79,10 +81,18 @@ public class StationaryEnemyController : MonoBehaviour {
   public virtual void Move() {
     if (alert) {
       if (seeker.IsDone ()) {
-        seeker.StartPath (transform.position, player.transform.position, OnPathComplete);
+        pathCooldown += Time.deltaTime;
+        if (pathCooldown >= pathTimeout) {
+          ABPath p = ABPath.Construct (transform.position, player.transform.position, OnPathComplete);
+          AstarPath.StartPath (p);
+          pathCooldown = 0f;
+        }
       }
     }
     if (path != null) {
+      if (!alert) {
+        Debug.Log ("Has a path, but is not in alert mode");
+      }
       if (currentPathWaypoint >= path.vectorPath.Count)
       {
         path = null;
@@ -96,10 +106,6 @@ public class StationaryEnemyController : MonoBehaviour {
       Vector3 dir = ( path.vectorPath[currentPathWaypoint] - transform.position ).normalized;
       facing = dir;
       dir *= enemySpeed * Time.deltaTime;
-      Debug.Log ("Moving enemy");
-      Debug.Log (dir.x);
-      Debug.Log (dir.y);
-      Debug.Log (path.vectorPath [currentPathWaypoint]);
       this.gameObject.transform.Translate(dir);
 
       //Check if we are close enough to the next waypoint
@@ -138,8 +144,9 @@ public class StationaryEnemyController : MonoBehaviour {
 
   // End this enemy's alert status
   public virtual void EndAlert() {
-    seeker.StartPath (transform.position, startPosition.position, OnPathComplete);
-    //facing = defaultFacing;
+    path = null;
+    ABPath p = ABPath.Construct (transform.position, startPosition, OnPathComplete);
+    AstarPath.StartPath (p);
     alert = false;
   }
 
