@@ -96,6 +96,10 @@ public class StationaryEnemyController : MonoBehaviour {
       Vector3 dir = ( path.vectorPath[currentPathWaypoint] - transform.position ).normalized;
       facing = dir;
       dir *= enemySpeed * Time.deltaTime;
+      Debug.Log ("Moving enemy");
+      Debug.Log (dir.x);
+      Debug.Log (dir.y);
+      Debug.Log (path.vectorPath [currentPathWaypoint]);
       this.gameObject.transform.Translate(dir);
 
       //Check if we are close enough to the next waypoint
