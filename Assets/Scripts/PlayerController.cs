@@ -204,7 +204,6 @@ public class PlayerController : MonoBehaviour {
     if (coll.gameObject.tag == Tags.ELEVATOR) {
       elevatorAnimator.SetBool("Close", true);
       anim.SetBool("Head Surprised", true);
-      gm.WinGame ();
     }
 
     if (coll.gameObject.tag == Tags.KEY) {

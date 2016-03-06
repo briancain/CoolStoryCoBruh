@@ -188,6 +188,17 @@ public class GameManager : MonoBehaviour {
 
   public void WinGame() {
     Debug.Log("You win!!");
+    gameOver = true;
+    gameOverText.enabled = true;
+    player.GetComponent<PlayerController> ().GameOver ();
+    foreach (GameObject obj in enemies) {
+      if (obj != null) {
+        obj.GetComponent<StationaryEnemyController>().GameOver();
+      }
+    }
+
+    audio.Stop();
+    SceneManager.LoadScene (3);
   }
 
   public void AlertEnemies() {
