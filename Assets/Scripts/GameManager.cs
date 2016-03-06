@@ -174,7 +174,6 @@ public class GameManager : MonoBehaviour {
   public void GameOver() {
     Debug.Log("Game Over");
     gameOver = true;
-    gameOverText.enabled = true;
     player.GetComponent<PlayerController> ().GameOver ();
     foreach (GameObject obj in enemies) {
       if (obj != null) {
