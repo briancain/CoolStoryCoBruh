@@ -203,6 +203,7 @@ public class PlayerController : MonoBehaviour {
   void OnCollisionEnter2D(Collision2D coll) {
     if (coll.gameObject.tag == Tags.ELEVATOR) {
       elevatorAnimator.SetBool("Close", true);
+      anim.SetBool("Head Surprised", true);
       gm.WinGame ();
     }
 
