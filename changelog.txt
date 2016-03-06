@@ -1,0 +1,10 @@
+# Changelog
+
+* Fixed box collider for final locked door
+* Fix game over bug where debug game over text would show up if gameover scene
+didn't load fast enough
+* Updated stationary AI to chase player if alert phase is enabled using A*
+pathfinding
+* Added elevator asset for when the player reaches the end of the maze and
+wins
+* Added game win scene for when player wins
