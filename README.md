@@ -18,6 +18,7 @@ If the snake bar reaches the end, the snakes will alert the enemies to your posi
 
 ## Ideas to Expand Gameplay
 
++ Additional and/or more complex snake-hand mini games
 + Objects to hide in, behind, or under
 + Additional super powers to immobilize patroling enemies
 + Cloaking super powers
