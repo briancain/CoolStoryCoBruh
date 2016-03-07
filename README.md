@@ -2,6 +2,8 @@
 
 Our game is centered around Co-Bruh, an war hero with snakes for hands who enjoys knitting. With K.O. kidnapped, Co-Bruh must infiltrate the Boxmore facility. However, having snakes for arms makes for cumbersome stealth missions. Boxmore, being a rather chilly super villain headquarters, is not a suitable environment for snake arms. Before embarking on his mission, Co-Bruh knits a scarf for his high maintenance extremities but only has enough yarn to comfortably cover one! He is forced to swap the scarf in order to keep his arms from starting a fuss and alerting patrol units around the Boxmore facility. In order to trick one arm into letting him remove the scarf, Co-Bruh must charm the pants... er, scarf off of his arm by performing his Snake Trance Yarn Dance super power! Co-Bruh must remain vigilant as he is vulnerable to patroling units while using his charming super ability.
 
+Now get in there and save some heroes, soldier!
+
 ## How to play
 
 Press Space bar to skip the title screen
