@@ -7,4 +7,6 @@ didn't load fast enough
 pathfinding
 * Added elevator asset for when the player reaches the end of the maze and
 wins
+* Added final game voice for when player wins
 * Added game win scene for when player wins
+* Added audio cues to tell player what to do for minigame

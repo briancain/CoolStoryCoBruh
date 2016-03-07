@@ -196,6 +196,9 @@ MonoBehaviour:
   continueGameTheme: {fileID: 8300000, guid: ddd885d3946ff44b2883c72119386bb8, type: 3}
   alertTheme: {fileID: 8300000, guid: d428c44b3c6d84cbdb1fcd53dd0928aa, type: 3}
   gameOverTheme: {fileID: 8300000, guid: 3a6e73e4880c84e709453747f20277f1, type: 3}
+  swipeAudio: {fileID: 8300000, guid: 045cd9f2054784283a30159cc0f2c575, type: 3}
+  tapAudio: {fileID: 8300000, guid: 2c9f8478a6fa242e99b367b6bfc3a3ff, type: 3}
+  startMiniGameAudio: {fileID: 8300000, guid: 880281bad432f40dd9b348aa5c803042, type: 3}
   voiceWin:
   - {fileID: 8300000, guid: c00d03e3fafea492dbf4bfbae7d95025, type: 3}
   - {fileID: 8300000, guid: a92a9d076d66141c7b2fe66e35c526c1, type: 3}

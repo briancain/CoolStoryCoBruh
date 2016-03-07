@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour {
   public AudioClip alertTheme;
   public AudioClip gameOverTheme;
 
+  public AudioClip swipeAudio;
+  public AudioClip tapAudio;
+  public AudioClip startMiniGameAudio;
+
   public AudioClip[] voiceWin;
 
   public AudioClip loseMiniGameTheme;
@@ -79,6 +83,8 @@ public class GameManager : MonoBehaviour {
     bool isSuccess = player.GetComponent<PlayerController>().startMiniGameMode();
     bool winGame = false;
 
+    //audio.PlayOneShot(startMiniGameAudio, 1.0f);
+
     if (player.GetComponent<PlayerController>().snakeChange > 0) {
       rightAnim.SetBool("Skarf On", true);
       leftAnim.SetBool("Skarf On", false);
@@ -122,11 +128,13 @@ public class GameManager : MonoBehaviour {
     if (randGame == 0f) {
       //swipe
       rightAnim.SetBool("Left Gesture", true);
+      audio.PlayOneShot(swipeAudio, 1.0f);
       leftAnim.SetBool("Left Gesture", true);
     } else {
       // tap
       rightAnim.SetBool("Click Gesture", true);
       leftAnim.SetBool("Click Gesture", true);
+      audio.PlayOneShot(tapAudio, 1.0f);
     }
 
     miniGameController.StartGame(3, randGame);
