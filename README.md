@@ -1,6 +1,6 @@
 # OK K.O.! BoxMore Break-in: Cool Story Co-Bruh
 
-Our game is centered around Co-Bruh, an action hero with snakes for hands who enjoys knitting. With K.O. trapped, he must navigate through enemy territory while managing his snake hands. Since he has trouble knitting with his hands, he has only had time to put one scarf on a snake. So as the game progresses, the other snake gets too cold, fussy and jealous. When the snakes get to that state they start alerting any enemies around Co-Bruh. Before this happens, Co-Bruh must take care of his snake hands by alternating the scarves through a series of mini games all while the enemies continue to patrol.
+Our game is centered around Co-Bruh, an war hero with snakes for hands who enjoys knitting. With K.O. kidnapped, Co-Bruh must infiltrate the Boxmore facility. However, having snakes for arms makes for cumbersome stealth missions. Boxmore, being a rather chilly super villain headquarters, is not a suitable environment for snake arms. Before embarking on his mission, Co-Bruh knits a scarf for his high maintenance extremities but only has enough yarn to comfortably cover one! He is forced to swap the scarf in order to keep his arms from starting a fuss and alerting patrol units around the Boxmore facility. In order to trick one arm into letting him remove the scarf, Co-Bruh must charm the pants... er, scarf off of his arm by performing his Snake Trance Yarn Dance super power! Co-Bruh must remain vigilant as he is vulnerable to patroling units while using his charming super ability.
 
 ## How to play
 
@@ -13,3 +13,18 @@ If the snake bar reaches the end, the snakes will alert the enemies to your posi
 * Enable the mini game to calm the snakes by pressing space.
   + If snakes move outward, click and drag with mouse to swipe and win
   + If snakes move inward, click to win
+
+## Ideas to Expand Gameplay
+
++ Objects to hide in, behind, or under
++ Additional super powers to immobilize patroling enemies
++ Cloaking super powers
++ Different super powers for left and right hand-snakes
++ Escourt other Lakewood Plaza heroes through stealth missions
++ Utilize one-time escourt power ups
++ Well hidden elevator keycodes
++ Complex patroling patterns and other AI variance
++ Different types of patrolling robots (other than Jethro)
++ Environmental hazards that slow or speed up the snake meter (Ahhhh, this fire feels so nice on my scaley arms)
++ Light-based stealth missions where Co-Bruh must avoid search lights
++ Stealth-based boss battles
