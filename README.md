@@ -20,8 +20,8 @@ If the snake bar reaches the end, the snakes will alert the enemies to your posi
 + Additional super powers to immobilize patroling enemies
 + Cloaking super powers
 + Different super powers for left and right hand-snakes
-+ Escourt other Lakewood Plaza heroes through stealth missions
-+ Utilize one-time escourt power ups
++ Escort other Lakewood Plaza heroes through stealth missions
++ Utilize one-time escort power ups
 + Well hidden elevator keycodes
 + Complex patroling patterns and other AI variance
 + Different types of patrolling robots (other than Jethro)
