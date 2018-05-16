@@ -4,6 +4,10 @@ Our game is centered around Co-Bruh, an war hero with snakes for hands who enjoy
 
 Now get in there and save some heroes, soldier!
 
+## What is this??
+
+This repository hosts the code of a game jam game developed for Cartoon Network for its new IP OK-KO in 2016.
+
 ## How to play
 
 Press Space bar to skip the title screen
